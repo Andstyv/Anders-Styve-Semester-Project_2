@@ -91,4 +91,27 @@ main {
   padding-left: 40px;
   padding-right: 40px;
 }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  max-width: 900px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.product__card {
+  border: 1px solid black;
+}
+
+.product__img {
+  width: 200px;
+}
 /*# sourceMappingURL=style.css.map */

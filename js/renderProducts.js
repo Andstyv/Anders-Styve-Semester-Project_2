@@ -7,10 +7,11 @@ export function renderProducts(productsToRender) {
 
   productsToRender.forEach((product) => {
     console.log(product.image);
-    container.innerHTML += `<img src="${url}${product.image.url}" style=width:20%></img>
-                            <h3>${product.title}</h3>
-                            <p>Price: ${product.price}</p>
-                            <a href="product.html?id=${product.id}" >Link to product</a>
+    container.innerHTML += `<div class="product__card">
+                            <img class="product__img" src="${url}${product.image.url}"></img>
+                            <h3 class="product__title">${product.title}</h3>
+                            <p class="product__price">Price: ${product.price}</p>
+                            <a class ="product__link" href="product.html?id=${product.id}" >Link to product</a></div>
                             `;
   });
 }
