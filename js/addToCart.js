@@ -1,20 +1,32 @@
 import { getCartItems } from "./getCartItems.js";
 
 export function addToCart() {
-  console.log("click");
+  const counter = document.querySelector(".counter");
+  const count2 = localStorage.getItem("CartItems");
   const id = this.dataset.id;
   const title = this.dataset.title;
 
   const currentInCart = getCartItems();
 
-  const product = {
-    id: id,
-    title: title,
-  };
-  currentInCart.push(product);
-  saveCart(product);
+  const productExists = currentInCart.find(function (cartProducts) {
+    return cartProducts.id === id;
+  });
+
+  if (productExists === undefined) {
+    const product = {
+      id: id,
+      title: title,
+    };
+    currentInCart.push(product);
+    saveCart(currentInCart);
+    counter.innerHTML = currentInCart.length;
+  } else {
+    const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
+    saveCart(newCartProducts);
+    counter.innerHTML = newCartProducts.length;
+  }
 }
 
 function saveCart(items) {
-  localStorage.setItem("Cart", JSON.stringify(items));
+  localStorage.setItem("CartItems", JSON.stringify(items));
 }
