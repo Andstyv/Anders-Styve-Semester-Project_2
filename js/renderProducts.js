@@ -15,7 +15,7 @@ export function renderProducts(productsToRender) {
                             <h3 class="product__title">${product.title}</h3>
                             <p class="product__price">Price: ${product.price}</p>
                             <a class ="product__link" href="product.html?id=${product.id}" >Link to product</a>
-                            <i class="article__fav ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}"></i></div>
+                            <i class="article__fav ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-imgurl="${product.image.url}"></i></div>
                             `;
   });
 

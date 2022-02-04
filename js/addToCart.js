@@ -4,6 +4,8 @@ export function addToCart() {
   const counter = document.querySelector(".counter");
   const id = this.dataset.id;
   const title = this.dataset.title;
+  const price = this.dataset.price;
+  const imgUrl = this.dataset.imgurl;
 
   const currentInCart = getCartItems();
 
@@ -15,6 +17,10 @@ export function addToCart() {
     const product = {
       id: id,
       title: title,
+      price: price,
+      image: {
+        url: imgUrl,
+      },
     };
     currentInCart.push(product);
     saveCart(currentInCart);
