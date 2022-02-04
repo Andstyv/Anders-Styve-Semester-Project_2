@@ -1,16 +1,29 @@
-header {
-  font-size: 24px;
+//NAVIGATION
+.nav-container {
   display: flex;
-  min-height: 100px;
-  align-items: center;
+  flex-direction: row;
+  padding: 10px 40px;
   justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
+  align-items: center;
 }
-.links {
+.nav__logo i {
+  font-size: 32px;
+}
+.nav__links ul {
+  list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 40px;
+  padding: 0;
 }
+.nav__right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__counter {
+  display: flex;
+}
+
 main {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(250px, 3fr) minmax(20px, 1fr);
@@ -70,7 +83,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
   max-width: 900px;
   justify-content: center;
   margin: 0 auto;
@@ -79,8 +91,11 @@ main {
 
 .product__card {
   border: 1px solid black;
+  width: 200px;
 }
 
 .product__img {
+  height: 200px;
   width: 200px;
+  object-fit: cover;
 }
