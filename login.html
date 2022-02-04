@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>LOGIN</title>
+  </head>
+  <body>
+    <a href="index.html">INDEX</a> </br>
+    <a href="products.html">PRODUCTS</a> </br>
+    <div class="login-container">
+        <form class="login-form">
+          <h1>Log in as admin below:</h1>
+          <div id="login-error"></div>
+          <div>
+            <label for="usernameInput"></label>
+            <input type="email" name="username" id="usernameInput" placeholder="Username (Email)" value="admin@admin.com"/>
+          </div>
+          <div>
+            <label for="passwordInput"></label>
+            <input type="password" name="password" id="passwordInput" placeholder="Password" />
+          </div>
+          <div>
+            <button type="submit" id="login-btn">Sign in</button>
+          </div>
+        </form>
+      </div>
+    <script src="/js/login.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/35dab5c0f5.js" crossorigin="anonymous"></script>
+  </body>
+</html>

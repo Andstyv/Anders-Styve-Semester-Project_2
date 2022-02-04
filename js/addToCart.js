@@ -2,7 +2,6 @@ import { getCartItems } from "./getCartItems.js";
 
 export function addToCart() {
   const counter = document.querySelector(".counter");
-  const count2 = localStorage.getItem("CartItems");
   const id = this.dataset.id;
   const title = this.dataset.title;
 
