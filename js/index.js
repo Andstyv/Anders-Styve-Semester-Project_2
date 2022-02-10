@@ -1,6 +1,10 @@
+import { createNavMenu } from "./createNavMenu.js";
+import { logout } from "./logout.js";
 import { renderProducts } from "./renderProducts.js";
 
 const url = "http://localhost:1337";
+
+createNavMenu();
 
 export async function fetchFeaturedProducts() {
   try {
@@ -19,6 +23,7 @@ export async function fetchFeaturedProducts() {
     console.log(featuredProducts);
     console.log(products);
     renderProducts(featuredProducts);
+    logout();
   } catch (error) {
     console.log(error);
   }

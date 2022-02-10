@@ -1,9 +1,11 @@
 import { addToCart } from "./addToCart.js";
+import { getUserName } from "./storage.js";
 
 const url = "http://localhost:1337";
 
 export function renderProducts(productsToRender) {
   const container = document.querySelector(".container");
+  const username = getUserName();
 
   container.innerHTML = "";
 
@@ -15,7 +17,11 @@ export function renderProducts(productsToRender) {
                             <h3 class="product__title">${product.title}</h3>
                             <p class="product__price">Price: ${product.price}</p>
                             <a class ="product__link" href="product.html?id=${product.id}" >Link to product</a>
-                            <i class="article__fav ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-imgurl="${product.image.url}"></i></div>
+                            <i class="article__fav ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-imgurl="${
+      product.image.url
+    }"></i>
+                            ${username ? `<a href="edit.html?id=${product.id}" >Edit article</a>` : ""}
+                            </div>
                             `;
   });
 
