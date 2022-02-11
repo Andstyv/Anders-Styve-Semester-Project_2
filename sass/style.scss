@@ -92,6 +92,13 @@ main {
 .product__card {
   border: 1px solid black;
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product__descr {
+  width: 200px;
+  word-wrap: break-word;
 }
 
 .product__img {

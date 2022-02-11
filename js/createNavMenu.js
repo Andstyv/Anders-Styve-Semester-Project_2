@@ -18,6 +18,7 @@ export function createNavMenu() {
   navContainer.innerHTML = `<ul>
     <li><a href="/" class="${pathname === "/" ? "active" : ""}">Home</a></li>
     <li><a href="products.html"class="${pathname === "/products.html" ? "active" : ""}">Products</a></li>
+    <li><a href="cart.html"class="${pathname === "/cart.html" ? "active" : ""}">Cart</a></li>
     ${authLink}
     ${logoutLink}
 </ul>`;

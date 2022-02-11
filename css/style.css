@@ -130,6 +130,19 @@ main {
 .product__card {
   border: 1px solid black;
   width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.product__descr {
+  width: 200px;
+  word-wrap: break-word;
 }
 
 .product__img {
