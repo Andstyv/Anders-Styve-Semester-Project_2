@@ -41,6 +41,13 @@
           <button type="submit" id="edit-btn">Update</button>
         </div>
       </form>
+      <form id="upload-form">
+        <input type="file" name="files" />
+        <input type="text" name="ref" value="Products" hidden />
+        <input type="text" name="refId" id="imageRefId" />
+        <input type="text" name="field" value="image" hidden />
+        <input type="submit" value="Send" />
+      </form>
       <div class="delete-container"></div>
     </div>
     <script src="./js/editProduct.js" type="module"></script>
