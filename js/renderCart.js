@@ -8,6 +8,7 @@ const url = "http://localhost:1337";
 export function renderCart(productsToRender) {
   console.log("RenderCart");
   const container = document.querySelector(".container");
+  const sumContainer = document.querySelector(".sum");
   const username = getUserName();
 
   container.innerHTML = "";
@@ -19,9 +20,16 @@ export function renderCart(productsToRender) {
     container.innerHTML = "Empty";
   }
 
+  let totalPrice = 0;
+  for (let i = 0; i < productsToRender.length; i++) {
+    totalPrice += productsToRender[i].price;
+  }
+
   productsToRender.forEach((product) => {
     let cssStar = "fas";
-    container.innerHTML += `<div class="product__card">
+    sumContainer.innerHTML = `Total price: ${totalPrice}`;
+    container.innerHTML += `
+                            <div class="product__card">
                             <img class="product__img" src="${url}${product.image.url}"></img>
                             <h3 class="product__title">${product.title}</h3>
                             <p class="product__price">Price: ${product.price}</p>

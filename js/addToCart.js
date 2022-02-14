@@ -18,7 +18,7 @@ export function addToCart() {
     const product = {
       id: id,
       title: title,
-      price: price,
+      price: parseFloat(price),
       description: descr,
       image: {
         url: imgUrl,

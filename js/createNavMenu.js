@@ -1,6 +1,8 @@
+import { getCartItems } from "./getCartItems.js";
 import { getUserName } from "./storage.js";
 
 export function createNavMenu() {
+  let itemsInCart = getCartItems();
   const { pathname } = document.location;
 
   const username = getUserName();
@@ -18,7 +20,7 @@ export function createNavMenu() {
   navContainer.innerHTML = `<ul>
     <li><a href="/" class="${pathname === "/" ? "active" : ""}">Home</a></li>
     <li><a href="products.html"class="${pathname === "/products.html" ? "active" : ""}">Products</a></li>
-    <li><a href="cart.html"class="${pathname === "/cart.html" ? "active" : ""}">Cart</a></li>
+    <li><a href="cart.html"class="${pathname === "/cart.html" ? "active" : ""}">Cart - <span>${itemsInCart.length ? itemsInCart.length : ""}</span></a></li>
     ${authLink}
     ${logoutLink}
 </ul>`;
