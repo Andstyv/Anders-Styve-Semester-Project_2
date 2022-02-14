@@ -5,6 +5,7 @@ export function addToCart() {
   const id = this.dataset.id;
   const title = this.dataset.title;
   const price = this.dataset.price;
+  const descr = this.dataset.description;
   const imgUrl = this.dataset.imgurl;
 
   const currentInCart = getCartItems();
@@ -18,6 +19,7 @@ export function addToCart() {
       id: id,
       title: title,
       price: price,
+      description: descr,
       image: {
         url: imgUrl,
       },
@@ -28,7 +30,6 @@ export function addToCart() {
   } else {
     const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
     saveCart(newCartProducts);
-    counter.innerHTML = newCartProducts.length;
   }
 }
 

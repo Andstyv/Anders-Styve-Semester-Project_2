@@ -151,4 +151,8 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.article__fav {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
