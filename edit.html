@@ -13,6 +13,7 @@
       <h1>Edit article</h1>
       <div id="edit-error"></div>
       <div id="loading">Loading...</div>
+      <div class="product-img"></div>
       <form class="edit-item-form">
         <div>
           <label for="productNameInput">Product Name</label>
@@ -30,10 +31,10 @@
           <label for="descInput">Description</label>
           <textarea type="text" id="descInput" placeholder="Description"></textarea>
         </div>
-        <div>
+        <!-- <div>
           <label for="productImgInput">Product Image</label>
           <input type="text" id="productImgInput" placeholder="Product Image URL" />
-        </div>
+        </div> -->
         <div>
           <input type="hidden" id="idInput" placeholder="ID" />
         </div>
@@ -41,14 +42,16 @@
           <button type="submit" id="edit-btn">Update</button>
         </div>
       </form>
-      <form id="upload-form">
+      <form hidden id="upload-form">
         <input type="file" name="files" />
         <input type="text" name="ref" value="Products" hidden />
         <input type="text" name="refId" id="imageRefId" />
         <input type="text" name="field" value="image" hidden />
         <input type="submit" value="Send" />
       </form>
-      <div class="delete-container"></div>
+      <div class="delete-container">
+        <button type="button" class="delete-btn">Delete</button>
+      </div>
     </div>
     <script src="./js/editProduct.js" type="module"></script>
   </body>

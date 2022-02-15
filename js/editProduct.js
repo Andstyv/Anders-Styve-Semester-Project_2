@@ -1,11 +1,13 @@
 import { getToken } from "./storage.js";
 import { createNavMenu } from "./createNavMenu.js";
 import { logout } from "./logout.js";
+import { deleteProduct } from "./deleteProduct.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
+const baseUrl = "http://localhost:1337";
 const url = "http://localhost:1337/products/";
 
 const productUrl = url + id;
@@ -18,13 +20,12 @@ logout();
 if (!token) {
   location.href = "/";
 }
-
+const productImg = document.querySelector(".product-img");
 const editForm = document.querySelector(".edit-item-form");
 const productName = document.getElementById("productNameInput");
 const toggleFeatured = document.getElementById("toggleFeatured");
 const price = document.getElementById("priceInput");
 const description = document.getElementById("descInput");
-const productImg = document.getElementById("productImgInput");
 const idInput = document.getElementById("idInput");
 const editItemError = document.getElementById("edit-error");
 const loadingMsg = document.getElementById("loading");
@@ -37,13 +38,16 @@ async function fetchProductToEdit() {
     const product = await response.json();
     console.log(product);
 
+    productImg.innerHTML = `<img src="${baseUrl}${product.image.url}" style="width:300px"></img>`;
+
     productName.value = product.title;
     toggleFeatured.checked = product.featured;
     price.value = product.price;
     description.value = product.description;
     idInput.value = product.id;
-    productImg.value = product.image.url;
     imgRefId.value = product.image.id;
+
+    deleteProduct(product.id);
 
     console.log(product.featured);
   } catch (error) {
@@ -70,28 +74,51 @@ function sumbitEditForm(e) {
 
   console.log(imgUploadValue);
 
-  const data = {
-    id: idValue,
-    title: nameValue,
-    description: descValue,
-    price: priceValue,
-    featured: featuredValue,
-    img: imgUploadValue,
+  // const data = {
+  //   id: idValue,
+  //   title: nameValue,
+  //   description: descValue,
+  //   price: priceValue,
+  //   featured: featuredValue,
+  //   img: imgUploadValue,
+  // };
+  // console.log(data);
+  updateProduct(nameValue, descValue, priceValue, featuredValue, idValue);
+}
+
+async function updateProduct(title, description, price, featured, id) {
+  const data = JSON.stringify({ title: title, description: description, price: price, featured: featured });
+
+  const options = {
+    method: "PUT",
+    body: data,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
   };
-  console.log(data);
+
+  try {
+    const response = await fetch(productUrl, options);
+    const json = await response.json();
+
+    if (json.updated_at) {
+      console.log("success");
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 const uploadForm = document.getElementById("upload-form");
 
 uploadForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  addItem();
-
-  console.log("sending?");
+  addNewProductImg();
+  console.log("Updating product img");
 });
 
-async function addItem() {
+async function addNewProductImg() {
   const token = getToken();
   const uploadUrl = "http://localhost:1337/upload/";
 

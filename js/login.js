@@ -1,3 +1,4 @@
+import { createNavMenu } from "./createNavMenu.js";
 import { saveToken, saveUser } from "./storage.js";
 
 const url = "http://localhost:1337";
@@ -8,6 +9,8 @@ const password = document.getElementById("passwordInput");
 const errorContainer = document.getElementById("login-error");
 
 loginForm.addEventListener("submit", submitLoginForm);
+
+createNavMenu();
 
 function submitLoginForm(e) {
   e.preventDefault();
