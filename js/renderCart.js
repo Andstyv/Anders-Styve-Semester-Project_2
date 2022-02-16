@@ -19,15 +19,17 @@ export function renderCart(productsToRender) {
   for (let i = 0; i < productsToRender.length; i++) {
     totalPrice += productsToRender[i].price;
   }
+  sumContainer.innerHTML = `Total price: ${totalPrice}`;
 
   productsToRender.forEach((product) => {
     let cssStar = "fas";
-    sumContainer.innerHTML = `Total price: ${totalPrice}`;
+
     container.innerHTML += `
                             <div class="product__card">
                             <img class="product__img" src="${url}${product.image.url}"></img>
                             <h3 class="product__title">${product.title}</h3>
                             <p class="product__price">Price: ${product.price}</p>
+                            <a class ="product__link" href="product.html?id=${product.id}" >Link to product</a>
                             <i class="article__fav ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
       product.image.url
     }">Remove</i>

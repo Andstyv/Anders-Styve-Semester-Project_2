@@ -17,11 +17,19 @@ export function createNavMenu() {
 
   const navContainer = document.querySelector(".nav-container");
 
-  navContainer.innerHTML = `<ul>
-    <li><a href="/" class="${pathname === "/" ? "active" : ""}">Home</a></li>
-    <li><a href="products.html"class="${pathname === "/products.html" ? "active" : ""}">Products</a></li>
-    <li><a href="cart.html"class="${pathname === "/cart.html" ? "active" : ""}">Cart - <span>${itemsInCart.length ? itemsInCart.length : ""}</span></a></li>
-    ${authLink}
-    ${logoutLink}
-</ul>`;
+  navContainer.innerHTML = `
+  <div class="nav__logo"><i class="fab fa-pushed">shoos</i></div>
+  <div class="nav__left">
+    <ul class="nav__list">
+      <li class="nav__item"><a href="/" class="${pathname === "/" ? "nav__link--active" : "nav__link"}">Home</a></li>
+      <li class="nav__item"><a href="products.html"class="${pathname === "/products.html" ? "nav__link--active" : "nav__link"}">Products</a></li>
+      <li class="nav__item"><a href="cart.html"class="${pathname === "/cart.html" ? "nav__link--active" : "nav__link"}">Cart - <span>${itemsInCart.length ? itemsInCart.length : ""}</span></a></li>
+    </ul>
+  </div>
+<div class="nav__right">
+<ul class="nav__list">
+${authLink}
+${logoutLink}
+</ul>
+</div>`;
 }

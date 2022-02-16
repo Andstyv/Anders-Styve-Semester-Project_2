@@ -6,7 +6,7 @@ const url = "http://localhost:1337";
 const loginForm = document.querySelector(".login-form");
 const username = document.getElementById("usernameInput");
 const password = document.getElementById("passwordInput");
-const errorContainer = document.getElementById("login-error");
+const errorContainer = document.getElementById("login-form__error");
 
 loginForm.addEventListener("submit", submitLoginForm);
 

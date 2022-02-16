@@ -14,23 +14,17 @@ export async function addNewProductImg() {
       Authorization: `Bearer ${token}`,
     },
   };
-  console.log(options);
 
   try {
     const response = await fetch(uploadUrl, options);
     const json = await response.json();
 
-    console.log(json);
-    console.log(json[0].created_at);
-
     if (json[0].created_at) {
-      console.log("Success");
-      console.log(uploadFiles);
-
+      console.log("Img upload success");
       uploadFiles.value = "";
       fetchProductToEdit();
     }
   } catch (error) {
-    console.log("error");
+    console.log(`Error: ${error}`);
   }
 }
