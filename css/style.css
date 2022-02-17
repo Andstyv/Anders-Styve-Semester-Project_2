@@ -9,7 +9,8 @@ h3 {
   font-family: "Staatliches", cursive;
 }
 
-p {
+p,
+label {
   font-family: "Roboto Serif", sans-serif;
   font-weight: 300;
 }
@@ -145,19 +146,65 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
-  max-width: 900px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1400px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 200px;
+}
+
+.filter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  margin-top: 100px;
+  font-size: 28px;
+}
+
+.filter-container .input-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-container #filter-products {
+  width: 200px;
+  padding: 0;
+}
+
+.add-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.add-container button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #985d68;
+  border-radius: 2px;
+  color: white;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
 }
 
 .product__card {
   border-radius: 5px;
-  width: 200px;
+  margin-bottom: 50px;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,7 +226,7 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   height: 200px;
-  width: 200px;
+  width: 300px;
   border-radius: 5px 5px 0 0;
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
@@ -222,11 +269,28 @@ main {
   padding: 5px;
   background-color: #5d988d;
   border-radius: 2px;
+  font-size: 20px;
   color: #fff;
   margin: 20px 0 10px 0;
   text-transform: uppercase;
   font-family: "Staatliches", cursive;
   letter-spacing: 1px;
+}
+
+.product__link--edit {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 12px;
+  background-color: #985d68;
+  border-radius: 2px;
+  color: white;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
 }
 
 .article__fav {

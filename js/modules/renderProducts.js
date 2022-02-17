@@ -19,7 +19,7 @@ export function renderProducts(productsToRender) {
                               <h3 class="product__title">${product.title}</h3>
                               <p class="product__price">$${product.price}</p>
                               <a class ="product__link" href="product.html?id=${product.id}">Explore</a>   
-                              ${username ? `<a href="edit.html?id=${product.id}" >Edit article</a>` : ""}</div>
+                              ${username ? `<a class="product__link--edit"href="edit.html?id=${product.id}" >Edit article</a>` : ""}</div>
                             </div>`;
   });
 

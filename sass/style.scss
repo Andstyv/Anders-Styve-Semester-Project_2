@@ -9,7 +9,8 @@ h3 {
   font-family: "Staatliches", cursive;
 }
 
-p {
+p,
+label {
   font-family: "Roboto Serif", sans-serif;
   font-weight: 300;
 }
@@ -113,17 +114,55 @@ main {
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 900px;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1400px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 200px;
+}
+
+.filter-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  margin-top: 100px;
+  font-size: 28px;
+
+  .input-filter {
+    display: flex;
+    gap: 10px;
+  }
+
+  #filter-products {
+    width: 200px;
+    padding: 0;
+  }
+}
+
+.add-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: flex-end;
+
+  button {
+    padding: 5px;
+    font-size: 20px;
+    background-color: #985d68;
+    border-radius: 2px;
+    color: white;
+    font-family: "Staatliches", cursive;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .product__card {
   border-radius: 5px;
-  width: 200px;
+  margin-bottom: 50px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -136,7 +175,7 @@ main {
 .product__img {
   object-fit: cover;
   height: 200px;
-  width: 200px;
+  width: 300px;
   border-radius: 5px 5px 0 0;
   transition: transform 0.5s ease;
 }
@@ -165,11 +204,26 @@ main {
   padding: 5px;
   background-color: #5d988d;
   border-radius: 2px;
+  font-size: 20px;
   color: #fff;
   margin: 20px 0 10px 0;
   text-transform: uppercase;
   font-family: "Staatliches", cursive;
   letter-spacing: 1px;
+
+  &--edit {
+    align-self: center;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 12px;
+    background-color: #985d68;
+    border-radius: 2px;
+    color: white;
+    font-family: "Staatliches", cursive;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .article__fav {
