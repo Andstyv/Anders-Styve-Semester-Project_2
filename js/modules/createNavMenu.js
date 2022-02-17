@@ -1,5 +1,5 @@
 import { getCartItems } from "./getCartItems.js";
-import { getUserName } from "./storage.js";
+import { getUserName } from "../utils/storage.js";
 
 export function createNavMenu() {
   let itemsInCart = getCartItems();

@@ -1,8 +1,8 @@
-import { getToken } from "./storage.js";
-import { createNavMenu } from "./createNavMenu.js";
-import { logout } from "./logout.js";
-import { deleteProduct } from "./deleteProduct.js";
-import { addNewProductImg } from "./uploadProductImg.js";
+import { getToken } from "./utils/storage.js";
+import { createNavMenu } from "./modules/createNavMenu.js";
+import { logout } from "./modules/logout.js";
+import { deleteProduct } from "./modules/deleteProduct.js";
+import { addNewProductImg } from "./modules/uploadProductImg.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

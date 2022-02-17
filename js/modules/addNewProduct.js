@@ -1,4 +1,4 @@
-import { getToken, getUserName } from "./storage.js";
+import { getToken, getUserName } from "../utils/storage.js";
 
 const baseUrl = "http://localhost:1337/products";
 

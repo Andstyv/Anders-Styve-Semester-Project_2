@@ -1,6 +1,6 @@
-import { createNavMenu } from "./createNavMenu.js";
-import { logout } from "./logout.js";
-import { renderProducts } from "./renderProducts.js";
+import { createNavMenu } from "./modules/createNavMenu.js";
+import { logout } from "./modules/logout.js";
+import { renderProducts } from "./modules/renderProducts.js";
 
 const url = "http://localhost:1337";
 

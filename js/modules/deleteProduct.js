@@ -1,4 +1,4 @@
-import { getToken } from "./storage.js";
+import { getToken } from "../utils/storage.js";
 
 export function deleteProduct(id) {
   const deleteBtn = document.querySelector(".delete-btn");

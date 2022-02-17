@@ -1,7 +1,7 @@
 import { addToCart } from "./addToCart.js";
 import { createNavMenu } from "./createNavMenu.js";
 import { logout } from "./logout.js";
-import { getUserName } from "./storage.js";
+import { getUserName } from "../utils/storage.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);

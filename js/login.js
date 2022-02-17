@@ -1,5 +1,5 @@
-import { createNavMenu } from "./createNavMenu.js";
-import { saveToken, saveUser } from "./storage.js";
+import { createNavMenu } from "./modules/createNavMenu.js";
+import { saveToken, saveUser } from "./utils/storage.js";
 
 const url = "http://localhost:1337";
 

@@ -1,5 +1,5 @@
 import { addToCart } from "./addToCart.js";
-import { getUserName } from "./storage.js";
+import { getUserName } from "../utils/storage.js";
 
 const url = "http://localhost:1337";
 

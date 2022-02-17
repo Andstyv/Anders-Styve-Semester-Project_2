@@ -1,7 +1,6 @@
 import { getCartItems } from "./getCartItems.js";
 
 export function addToCart() {
-  const counter = document.querySelector(".counter");
   const id = this.dataset.id;
   const title = this.dataset.title;
   const price = this.dataset.price;
@@ -26,7 +25,6 @@ export function addToCart() {
     };
     currentInCart.push(product);
     saveCart(currentInCart);
-    counter.innerHTML = currentInCart.length;
   } else {
     const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
     saveCart(newCartProducts);

@@ -1,5 +1,5 @@
-import { fetchProductToEdit } from "./editProduct.js";
-import { getToken } from "./storage.js";
+import { getToken } from "../utils/storage.js";
+import { fetchProductToEdit } from "../editProduct.js";
 
 export async function addNewProductImg() {
   const uploadForm = document.getElementById("upload-form");

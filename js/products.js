@@ -1,9 +1,9 @@
-import { renderProducts } from "./renderProducts.js";
-import { filterProducts } from "./filterProducts.js";
-import { logout } from "./logout.js";
-import { createNavMenu } from "./createNavMenu.js";
-import { getToken } from "./storage.js";
-import { addNewProduct } from "./addNewProduct.js";
+import { renderProducts } from "./modules/renderProducts.js";
+import { logout } from "./modules/logout.js";
+import { createNavMenu } from "./modules/createNavMenu.js";
+import { getToken } from "./utils/storage.js";
+import { addNewProduct } from "./modules/addNewProduct.js";
+import { filterProducts } from "./modules/filterProducts.js";
 
 const url = "http://localhost:1337/products/";
 
