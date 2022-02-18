@@ -18,7 +18,7 @@ export function createNavMenu() {
   const navContainer = document.querySelector(".nav-container");
 
   navContainer.innerHTML = `
-  <div class="nav__logo"><i class="fab fa-pushed">shoos</i></div>
+  <div class="nav__logo"><i class="fab fa-pushed"></i><p class="nav__logo--txt">shoos</p></div>
   <div class="nav__left">
     <ul class="nav__list">
       <li class="nav__item"><a href="/" class="${pathname === "/" ? "nav__link--active" : "nav__link"}">Home</a></li>
@@ -27,7 +27,7 @@ export function createNavMenu() {
     </ul>
   </div>
 <div class="nav__right">
-<ul class="nav__list">
+<ul class="nav__list--admin">
 ${authLink}
 ${logoutLink}
 </ul>

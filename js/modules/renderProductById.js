@@ -9,7 +9,7 @@ const id = params.get("id");
 
 const baseUrl = "http://localhost:1337";
 const productUrl = baseUrl + "/products/" + id;
-const container = document.querySelector(".container");
+const container = document.querySelector(".specific-product-container");
 
 createNavMenu();
 logout();
@@ -19,7 +19,6 @@ async function fetchProductById(url) {
     const response = await fetch(url);
     const product = await response.json();
     const username = getUserName();
-    let cssStar = "fas";
 
     console.log(product);
     container.innerHTML = `<div class="specific-product__card">
@@ -29,8 +28,10 @@ async function fetchProductById(url) {
     <h3 class="specific-product__title">${product.title}</h3>
     <p class="specific-product__price">$${product.price}</p>
     <p class="specific-product__desc">${product.description}</p>
-    <i class="specific-product__cart ${cssStar} fa-shopping-cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${product.image.url}"> Add to cart</i>
-    ${username ? `<a href="edit.html?id=${product.id}" >Edit article</a>` : ""}
+    <div class="specific-product__cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
+      product.image.url
+    }"><i class="specific-product__cart--icon fas fa-shopping-cart"></i>Add to cart</div>
+    ${username ? `<a class="specific-product__edit" href="edit.html?id=${product.id}" >Edit article</a>` : ""}
     </div></div>
     `;
     const starFavBtn = document.querySelectorAll(".specific-product__cart");

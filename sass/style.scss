@@ -19,17 +19,30 @@ label {
 .nav-container {
   display: flex;
   flex-direction: row;
-  padding: 10px 40px;
+  padding: 10px 50px;
   align-items: center;
   justify-content: space-between;
+  background-color: #985d68;
+  color: #fff;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  width: 250px;
+
+  &--txt {
+    font-family: "Staatliches", cursive;
+    font-size: 36px;
+    margin-left: 5px;
+  }
 }
 .nav__logo i {
   font-size: 42px;
-  width: 250px;
 }
 .nav__right {
   display: flex;
   width: 250px;
+  justify-content: end;
 }
 .nav__list {
   list-style: none;
@@ -38,12 +51,18 @@ label {
   padding: 0;
   font-family: "Staatliches", cursive;
   font-size: 25px;
+
+  &--admin {
+    list-style: none;
+    font-family: "Staatliches", cursive;
+    font-size: 25px;
+  }
 }
 
 .nav__link {
   text-decoration: none;
   list-style: none;
-  color: #000;
+  color: #fff;
 
   &--active {
     color: #5d988d;
@@ -105,8 +124,7 @@ main {
   text-align: center;
   margin-top: 40px;
   font-size: 18px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 0px 50px;
 }
 
 // PRODUCTS
@@ -119,6 +137,7 @@ main {
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 200px;
+  padding: 0px 50px;
 }
 
 .filter-container {
@@ -274,7 +293,15 @@ main {
   }
 }
 
-// PRODUCT SPECIFIC
+// PRODUCT SPECIFIC PAGE
+
+.specific-product-container {
+  display: flex;
+  max-width: 1400px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
 .specific-product__card {
   margin-top: 100px;
@@ -319,6 +346,7 @@ main {
 .specific-product__cart {
   text-decoration: none;
   align-self: center;
+  font-family: "Staatliches", cursive;
   padding: 5px;
   cursor: pointer;
   background-color: rgb(185, 61, 81);
@@ -326,6 +354,24 @@ main {
   color: #fff;
   margin: 20px 0 10px 0;
   text-transform: uppercase;
+
+  &--icon {
+    margin-right: 10px;
+  }
+}
+
+.specific-product__edit {
+  text-decoration: none;
+  align-self: center;
+  padding: 5px;
+  background-color: #5d988d;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #fff;
+  margin: 20px 0 10px 0;
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
 }
 
 //CART
@@ -355,6 +401,14 @@ main {
       height: 150px;
       object-fit: cover;
     }
+    .cart-product__remove {
+      cursor: pointer;
+      font-family: "Staatliches", cursive;
+    }
+    .cart-product__icon {
+      margin-right: 5px;
+      color: #985d68;
+    }
   }
 }
 
@@ -375,8 +429,27 @@ main {
   }
 }
 
-// <div class="cart__card">
-// <img class="cart-product__img" src="${url}${product.image.url}"></img>
-// <h3 class="cart-product__title">${product.title}</h3>
-// <p class="cart-product__price">Price: ${product.price}</p>
-// <a class ="cart-product__link
+// FOOTER
+
+.footer {
+  background-color: #985d68;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Staatliches", cursive;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 0px 50px;
+
+  &__left {
+    width: 150px;
+  }
+  &__mid {
+    width: 150px;
+  }
+  &__right {
+    width: 150px;
+  }
+}

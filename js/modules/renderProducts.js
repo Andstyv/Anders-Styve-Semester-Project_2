@@ -10,7 +10,6 @@ export function renderProducts(productsToRender) {
   container.innerHTML = "";
 
   productsToRender.forEach((product) => {
-    let cssStar = "fas";
     const hasImage = product.image;
     container.innerHTML += `<div class="product__card">
                               <div class="product__image">
@@ -19,7 +18,7 @@ export function renderProducts(productsToRender) {
                               <h3 class="product__title">${product.title}</h3>
                               <p class="product__price">$${product.price}</p>
                               <a class ="product__link" href="product.html?id=${product.id}">Explore</a>   
-                              ${username ? `<a class="product__link--edit"href="edit.html?id=${product.id}" >Edit article</a>` : ""}</div>
+                              ${username ? `<a class="product__link--edit"href="edit.html?id=${product.id}" >Edit product</a>` : ""}</div>
                             </div>`;
   });
 
