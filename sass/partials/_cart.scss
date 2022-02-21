@@ -1,0 +1,99 @@
+//CART
+
+.cart-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 0px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+  .cart__card {
+    display: flex;
+    align-items: center;
+    margin: 20px 10px;
+    justify-content: space-between;
+
+    .cart-product__title {
+      width: 100px;
+      word-wrap: break-word;
+    }
+
+    .cart-product__img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .cart-product__remove {
+      cursor: pointer;
+      font-family: "Staatliches", cursive;
+    }
+    .cart-product__icon {
+      margin-right: 5px;
+      color: #985d68;
+    }
+  }
+}
+.cart-back-btn {
+  background-color: #5d988d;
+  width: 50px;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin: 100px 0 20px 10px;
+
+  &__link {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+}
+.sum-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 200px;
+
+  &__total {
+    display: flex;
+    margin-right: 20px;
+  }
+}
+
+.shopcart {
+  background-color: #985d68;
+  display: flex;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  bottom: 110px;
+  right: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+
+  .cart-widget-content {
+    display: flex;
+    flex-direction: column;
+
+    i {
+      color: #fff;
+      font-size: 64px;
+      margin-top: 5px;
+    }
+    span {
+      position: absolute;
+      top: 33px;
+      left: 31px;
+      font-family: "Staatliches", cursive;
+      font-size: 32px;
+      color: #000;
+    }
+  }
+}

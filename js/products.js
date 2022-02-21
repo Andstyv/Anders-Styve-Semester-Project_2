@@ -4,11 +4,13 @@ import { createNavMenu } from "./modules/createNavMenu.js";
 import { getToken } from "./utils/storage.js";
 import { addNewProduct } from "./modules/addNewProduct.js";
 import { filterProducts } from "./modules/filterProducts.js";
+import { itemsInCartTracker } from "./modules/itemsInCartTracker.js";
 
 const url = "http://localhost:1337/products/";
 
 createNavMenu();
 addNewProduct();
+itemsInCartTracker();
 
 export async function fetchProducts() {
   try {

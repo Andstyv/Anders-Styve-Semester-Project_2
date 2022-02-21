@@ -1,10 +1,12 @@
 import { createNavMenu } from "./modules/createNavMenu.js";
+import { itemsInCartTracker } from "./modules/itemsInCartTracker.js";
 import { logout } from "./modules/logout.js";
 import { renderProducts } from "./modules/renderProducts.js";
 
 const url = "http://localhost:1337";
 
 createNavMenu();
+itemsInCartTracker();
 
 export async function fetchFeaturedProducts() {
   try {

@@ -1,0 +1,129 @@
+//NAVIGATION
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #985d68;
+  color: #fff;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+
+  &--txt {
+    font-family: "Staatliches", cursive;
+    font-size: 36px;
+    margin: 10px 0 10px 5px;
+  }
+  i {
+    font-size: 48px;
+  }
+}
+
+.nav__right {
+  display: flex;
+  width: 250px;
+  justify-content: center;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+  font-size: 25px;
+
+  &--admin {
+    list-style: none;
+    font-family: "Staatliches", cursive;
+    font-size: 20px;
+    background-color: #5d988d;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0px 0 50px 0;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+    li {
+      padding: 2px 5px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      button {
+        font-family: "Staatliches", cursive;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+
+  &--active {
+    color: #5d988d;
+  }
+}
+
+// //NAVIGATION LARGE SCREENS
+// .nav-container {
+//     display: flex;
+//     flex-direction: row;
+//     padding: 10px 50px;
+//     align-items: center;
+//     justify-content: space-between;
+//     background-color: #985d68;
+//     color: #fff;
+//   }
+//   .nav__logo {
+//     display: flex;
+//     align-items: center;
+//     width: 250px;
+
+//     &--txt {
+//       font-family: "Staatliches", cursive;
+//       font-size: 36px;
+//       margin-left: 5px;
+//     }
+//     i {
+//       font-size: 48px;
+//     }
+//   }
+
+//   .nav__right {
+//     display: flex;
+//     width: 250px;
+//     justify-content: end;
+//   }
+//   .nav__list {
+//     list-style: none;
+//     display: flex;
+//     gap: 40px;
+//     padding: 0;
+//     font-family: "Staatliches", cursive;
+//     font-size: 25px;
+
+//     &--admin {
+//       list-style: none;
+//       font-family: "Staatliches", cursive;
+//       font-size: 25px;
+//     }
+//   }
+
+//   .nav__link {
+//     text-decoration: none;
+//     list-style: none;
+//     color: #fff;
+
+//     &--active {
+//       color: #5d988d;
+//     }
+//   }

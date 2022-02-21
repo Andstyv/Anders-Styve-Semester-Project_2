@@ -25,9 +25,9 @@ export function renderCart(productsToRender) {
     container.innerHTML += `
                             <div class="cart__card">
                             <img class="cart-product__img" src="${url}${product.image.url}"></img>
-                            <h3 class="cart-product__title">${product.title}</h3>
+                            <h3 class="cart-product__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
                             <p class="cart-product__price">$${product.price}</p>
-                            <a class ="cart-product__link" href="product.html?id=${product.id}" >Link to product</a>
+                            
                             <div class="cart-product__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${product.image.url}"><i class="cart-product__icon fas fa-times-circle"></i>Remove</div>
                             </div>
                             `;

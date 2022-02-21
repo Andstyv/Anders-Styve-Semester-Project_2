@@ -1,0 +1,47 @@
+// LOGIN
+.login-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.login-form {
+  text-align: center;
+  background-color: #5d988d;
+  border-radius: 5px;
+  padding: 25px;
+
+  &__title {
+    margin-bottom: 50px;
+    color: #fff;
+  }
+}
+
+#login-form__user {
+  margin: 10px;
+
+  #usernameInput {
+    padding: 5px;
+  }
+}
+#login-form__password {
+  margin: 10px;
+  #passwordInput {
+    padding: 5px;
+  }
+}
+#login-form__button {
+  margin-top: 50px;
+
+  button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    background-color: #985d68;
+    border-radius: 2px;
+    font-family: "Staatliches", cursive;
+    letter-spacing: 1px;
+  }
+}

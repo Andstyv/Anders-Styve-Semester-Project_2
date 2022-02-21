@@ -2,7 +2,6 @@ import { getCartItems } from "./getCartItems.js";
 import { getUserName } from "../utils/storage.js";
 
 export function createNavMenu() {
-  let itemsInCart = getCartItems();
   const { pathname } = document.location;
 
   const username = getUserName();
@@ -23,7 +22,7 @@ export function createNavMenu() {
     <ul class="nav__list">
       <li class="nav__item"><a href="/" class="${pathname === "/" ? "nav__link--active" : "nav__link"}">Home</a></li>
       <li class="nav__item"><a href="products.html"class="${pathname === "/products.html" ? "nav__link--active" : "nav__link"}">Products</a></li>
-      <li class="nav__item"><a href="cart.html"class="${pathname === "/cart.html" ? "nav__link--active" : "nav__link"}">Cart - <span>${itemsInCart.length ? itemsInCart.length : ""}</span></a></li>
+      <li class="nav__item"><a href="cart.html"class="${pathname === "/cart.html" ? "nav__link--active" : "nav__link"}">Cart</a></li>
     </ul>
   </div>
 <div class="nav__right">

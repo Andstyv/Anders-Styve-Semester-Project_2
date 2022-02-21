@@ -2,6 +2,7 @@ import { addToCart } from "./addToCart.js";
 import { createNavMenu } from "./createNavMenu.js";
 import { logout } from "./logout.js";
 import { getUserName } from "../utils/storage.js";
+import { itemsInCartTracker } from "./itemsInCartTracker.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -13,6 +14,7 @@ const container = document.querySelector(".specific-product-container");
 
 createNavMenu();
 logout();
+itemsInCartTracker();
 
 async function fetchProductById(url) {
   try {
@@ -21,7 +23,9 @@ async function fetchProductById(url) {
     const username = getUserName();
 
     console.log(product);
-    container.innerHTML = `<div class="specific-product__card">
+    container.innerHTML = `
+    <div class="back-btn"><a class="back-btn__link "href="products.html">Back</a></div>
+    <div class="specific-product__card">
     <div class="specific-product__image">
     <img class="specific-product__img" src="${baseUrl}${product.image.url}"></img></div>
     <div class="specific-product__content">

@@ -1,4 +1,5 @@
 import { getCartItems } from "./getCartItems.js";
+import { itemsInCartTracker } from "./itemsInCartTracker.js";
 
 export function addToCart() {
   const id = this.dataset.id;
@@ -25,9 +26,11 @@ export function addToCart() {
     };
     currentInCart.push(product);
     saveCart(currentInCart);
+    itemsInCartTracker();
   } else {
     const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
     saveCart(newCartProducts);
+    itemsInCartTracker();
   }
 }
 
