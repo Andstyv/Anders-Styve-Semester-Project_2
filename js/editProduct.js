@@ -56,7 +56,7 @@ export async function fetchProductToEdit() {
     editItemError.innerHTML = `An error occured: ${error}`;
     loadingMsg.style.display = "none";
   } finally {
-    editForm.style.display = "block";
+    editForm.style.display = "flex";
     loadingMsg.style.display = "none";
   }
 }

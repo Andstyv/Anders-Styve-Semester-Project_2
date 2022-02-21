@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200;300;400;500&family=Staatliches&display=swap" rel="stylesheet" />
     <title>Edit Products</title>
   </head>
   <body>
@@ -42,17 +45,20 @@
           <button type="submit" id="edit-btn">Update</button>
         </div>
       </form>
-      <form id="upload-form">
-        <input type="file" name="files" id="inputFiles" />
-        <input type="text" name="ref" value="Products" hidden />
-        <input type="text" name="refId" id="imageRefId" />
-        <input type="text" name="field" value="image" hidden />
-        <input type="submit" value="Send" />
-      </form>
+
       <div class="delete-container">
         <button type="button" class="delete-btn">Delete</button>
       </div>
     </div>
+    <form id="upload-form">
+      <div>Exit</div>
+      <h2>Upload a file below</h2>
+      <input type="file" name="files" id="inputFiles" />
+      <input type="text" name="ref" value="Products" hidden />
+      <input type="text" name="refId" id="imageRefId" />
+      <input type="text" name="field" value="image" hidden />
+      <input type="submit" value="Send" />
+    </form>
     <script src="./js/editProduct.js" type="module"></script>
     <script src="https://kit.fontawesome.com/35dab5c0f5.js" crossorigin="anonymous"></script>
   </body>
