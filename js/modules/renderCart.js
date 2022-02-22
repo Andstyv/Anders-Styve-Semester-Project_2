@@ -17,7 +17,7 @@ export function renderCart(productsToRender) {
 
   let totalPrice = 0;
   for (let i = 0; i < productsToRender.length; i++) {
-    totalPrice += productsToRender[i].price;
+    totalPrice += productsToRender[i].price * productsToRender[i].qty;
   }
   sumContainer.innerHTML = `<p class="sum-container__total">Total price: $${totalPrice}</p>`;
 
@@ -26,9 +26,13 @@ export function renderCart(productsToRender) {
                             <div class="cart__card">
                             <img class="cart-product__img" src="${url}${product.image.url}"></img>
                             <h3 class="cart-product__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
-                            <p class="cart-product__price">$${product.price}</p>
+                            <p class="cart-product__qty">${product.qty}</p>
+                            <p class="cart-product__price">$${product.price * product.qty}</p>
+
                             
-                            <div class="cart-product__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${product.image.url}"><i class="cart-product__icon fas fa-times-circle"></i>Remove</div>
+                            <div class="cart-product__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
+      product.image.url
+    }"><i class="cart-product__icon fas fa-times-circle"></i>Remove</div>
                             </div>
                             `;
   });

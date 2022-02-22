@@ -7,6 +7,7 @@ export function addToCart() {
   const price = this.dataset.price;
   const descr = this.dataset.description;
   const imgUrl = this.dataset.imgurl;
+  const quantity = 1;
 
   const currentInCart = getCartItems();
 
@@ -18,6 +19,7 @@ export function addToCart() {
     const product = {
       id: id,
       title: title,
+      qty: quantity,
       price: parseFloat(price),
       description: descr,
       image: {
@@ -28,12 +30,17 @@ export function addToCart() {
     saveCart(currentInCart);
     itemsInCartTracker();
   } else {
-    const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
-    saveCart(newCartProducts);
-    itemsInCartTracker();
+    productExists.qty = productExists.qty + quantity;
+    saveCart(currentInCart);
   }
 }
 
 function saveCart(items) {
   localStorage.setItem("CartItems", JSON.stringify(items));
 }
+
+// else {
+//   const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
+//   saveCart(newCartProducts);
+//   itemsInCartTracker();
+// }
