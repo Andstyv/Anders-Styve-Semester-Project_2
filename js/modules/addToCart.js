@@ -32,6 +32,7 @@ export function addToCart() {
   } else {
     productExists.qty = productExists.qty + quantity;
     saveCart(currentInCart);
+    itemsInCartTracker();
   }
 }
 
