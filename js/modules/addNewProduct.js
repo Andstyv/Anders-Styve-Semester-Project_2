@@ -17,6 +17,7 @@ export function addNewProduct() {
       addContainer.innerHTML += `
           <div id="add-error"></div>
           <form class="add-form">
+          <button id="add-close-btn">Close</button>
           <div>
           <label for="productNameInput">Product Name</label>
           <input type="text" id="productNameInput" placeholder="Product Name" />
@@ -33,10 +34,14 @@ export function addNewProduct() {
           <label for="descInput">Description</label>
           <textarea type="text" id="descInput" placeholder="Description"></textarea>
         </div>
-          <div>
-            <button type="submit" id="add-btn">Add</button>
-          </div></form>`;
+<button type="submit" class="btn-secondary" id="add-btn">Add</button>
+</form>`;
       const form = document.querySelector("form");
+      const closeBtn = document.getElementById("add-close-btn");
+      closeBtn.onclick = function () {
+        addContainer.innerHTML = `<button class="btn-main" id="add-new">+ Add new product</button>`;
+        addNewProduct();
+      };
       form.addEventListener("submit", submitAddForm);
     };
   }
