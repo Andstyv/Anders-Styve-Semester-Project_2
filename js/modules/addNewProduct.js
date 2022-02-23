@@ -34,6 +34,7 @@ export function addNewProduct() {
           <label for="descInput">Description</label>
           <textarea type="text" id="descInput" placeholder="Description"></textarea>
         </div>
+        <div class="edit-conf-msg"></div>
 <button type="submit" class="btn-secondary" id="add-btn">Add</button>
 </form>`;
       const form = document.querySelector("form");
@@ -66,6 +67,7 @@ function submitAddForm(e) {
 
 async function addProductDetails(name, featured, price, desc) {
   const data = JSON.stringify({ title: name, featured: featured, price: price, description: desc });
+  const editConfMsg = document.querySelector(".edit-conf-msg");
 
   const token = getToken();
 
@@ -80,12 +82,16 @@ async function addProductDetails(name, featured, price, desc) {
 
   try {
     const response = await fetch(baseUrl, options);
-    const json = await response.json;
+    const json = await response.json();
 
     if (json.created_at) {
       console.log("New product added");
+      editConfMsg.classList.add("edit-green");
+      editConfMsg.innerHTML = `<i class="far fa-check-circle"></i> Successfully updated`;
     }
   } catch (error) {
     console.log(error);
+    editConfMsg.classList.add("edit-red");
+    editConfMsg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Error: ${error}`;
   }
 }
