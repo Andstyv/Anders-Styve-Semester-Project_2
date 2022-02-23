@@ -13,6 +13,7 @@
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 200px;
+  gap: 10px;
 }
 
 .filter-container {
@@ -41,18 +42,6 @@
   margin: 0 auto;
   justify-content: center;
   margin-top: 20px;
-
-  button {
-    padding: 5px;
-    font-size: 20px;
-    background-color: #985d68;
-    border-radius: 2px;
-    color: white;
-    font-family: "Staatliches", cursive;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-  }
 }
 
 .product__card {
@@ -127,6 +116,13 @@
 }
 
 // PRODUCTS LARGE SCREENS
+@media (min-width: 768px) {
+  .container {
+    justify-content: space-between;
+    padding: 0 50px;
+    gap: 10px;
+  }
+}
 
 // .container {
 //     display: flex;

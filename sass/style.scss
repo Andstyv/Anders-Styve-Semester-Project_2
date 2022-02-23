@@ -8,6 +8,48 @@
 @import "partials/editProduct";
 
 // UNIVERSAL
+$main-color: #985d68;
+$secondary-color: #5d988d;
+$text-color: #000;
+$bg-color: #fff;
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-main {
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+  background-color: $main-color;
+  border-radius: 2px;
+  color: $bg-color;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.btn-secondary {
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+  background-color: $secondary-color;
+  border-radius: 2px;
+  color: $bg-color;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;

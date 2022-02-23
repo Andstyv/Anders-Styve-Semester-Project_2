@@ -31,6 +31,22 @@ const idInput = document.getElementById("idInput");
 const editItemError = document.getElementById("edit-error");
 const loadingMsg = document.getElementById("loading");
 const imgRefId = document.getElementById("imageRefId");
+const imgUploadBtn = document.getElementById("upload-img-btn");
+const uploadForm = document.querySelector(".upload-form");
+const uploadExitBtn = document.getElementById("upload-exit");
+
+imgUploadBtn.addEventListener("click", toggleUploadModal);
+uploadExitBtn.addEventListener("click", toggleUploadModal);
+
+function toggleUploadModal() {
+  uploadForm.classList.toggle("show-modal");
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    uploadForm.classList.remove("show-modal");
+  }
+});
 
 export async function fetchProductToEdit() {
   try {
@@ -50,8 +66,6 @@ export async function fetchProductToEdit() {
     imgRefId.value = product.id;
 
     deleteProduct(product.id);
-
-    console.log(product.featured);
   } catch (error) {
     editItemError.innerHTML = `An error occured: ${error}`;
     loadingMsg.style.display = "none";
@@ -73,20 +87,12 @@ function sumbitEditForm(e) {
   const descValue = description.value.trim();
   const idValue = parseInt(idInput.value);
 
-  // const data = {
-  //   id: idValue,
-  //   title: nameValue,
-  //   description: descValue,
-  //   price: priceValue,
-  //   featured: featuredValue,
-  //   img: imgUploadValue,
-  // };
-  // console.log(data);
   updateProduct(nameValue, descValue, priceValue, featuredValue, idValue);
 }
 
 async function updateProduct(title, description, price, featured, id) {
   const data = JSON.stringify({ title: title, description: description, price: price, featured: featured });
+  const editConfMsg = document.querySelector(".edit-conf-msg");
 
   const options = {
     method: "PUT",
@@ -102,14 +108,14 @@ async function updateProduct(title, description, price, featured, id) {
     const json = await response.json();
 
     if (json.updated_at) {
-      console.log("success");
+      editConfMsg.classList.add("edit-green");
+      editConfMsg.innerHTML = `<i class="far fa-check-circle"></i> Successfully updated`;
     }
   } catch (error) {
-    console.log(error);
+    editConfMsg.classList.add("edit-red");
+    editConfMsg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Error: ${error}`;
   }
 }
-
-const uploadForm = document.getElementById("upload-form");
 
 uploadForm.addEventListener("submit", (e) => {
   e.preventDefault();

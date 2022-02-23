@@ -9,7 +9,7 @@ export function addNewProduct() {
   const username = getUserName();
 
   if (username) {
-    addContainer.innerHTML = `<button id="add-new">+ Add new product</button>`;
+    addContainer.innerHTML = `<button class="btn-main" id="add-new">+ Add new product</button>`;
 
     const addBtn = document.getElementById("add-new");
 

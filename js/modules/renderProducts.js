@@ -17,8 +17,10 @@ export function renderProducts(productsToRender) {
                               <div class="product__content">
                               <h3 class="product__title">${product.title}</h3>
                               <p class="product__price">$${product.price}</p>
-                              <a class ="product__link" href="product.html?id=${product.id}">Explore</a>   
-                              ${username ? `<a class="product__link--edit"href="edit.html?id=${product.id}" >Edit product</a>` : ""}</div>
+                              <div class="btn-container">
+                              <a class ="btn-secondary" href="product.html?id=${product.id}">Explore</a></div>
+                              <div class="btn-container">
+                              ${username ? `<a class="btn-main"href="edit.html?id=${product.id}" >Edit product</a>` : ""}</div></div>
                             </div>`;
   });
 

@@ -2,7 +2,7 @@
 
 main {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(300px, 3fr) minmax(20px, 1fr);
+  grid-template-columns: minmax(20px, 1fr) minmax(300px, 900px) minmax(20px, 1fr);
   grid-template-rows: minmax(50px, 150px) 100px minmax(50px, 150px);
 }
 
@@ -56,6 +56,18 @@ main {
 }
 
 // LARGE SCREENS
+
+@media (min-width: 768px) {
+  .texter {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .bg-mid {
+    h1 {
+      margin-top: 25px;
+    }
+  }
+}
 
 // INDEX PAGE
 

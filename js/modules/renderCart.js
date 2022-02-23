@@ -1,12 +1,10 @@
 import { RemoveFromCart } from "./removeFromCart.js";
-import { getUserName } from "../utils/storage.js";
 
 const url = "http://localhost:1337";
 
 export function renderCart(productsToRender) {
   const container = document.querySelector(".cart-container");
   const sumContainer = document.querySelector(".sum-container");
-  const username = getUserName();
 
   container.innerHTML = "";
 
@@ -24,9 +22,11 @@ export function renderCart(productsToRender) {
   productsToRender.forEach((product) => {
     container.innerHTML += `
                             <div class="cart__card">
+                            <div class="cart-product__head">
                             <img class="cart-product__img" src="${url}${product.image.url}"></img>
                             <h3 class="cart-product__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
-                            <p class="cart-product__qty">${product.qty}</p>
+                            </div>
+                            <p class="cart-product__qty">Qty: ${product.qty}</p>
                             <p class="cart-product__price">$${product.price * product.qty}</p>
 
                             

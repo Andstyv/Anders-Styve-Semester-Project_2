@@ -13,6 +13,13 @@
     align-items: center;
     margin: 20px 10px;
     justify-content: space-between;
+    border-top: 1px dashed lightgray;
+    border-bottom: 1px dashed lightgray;
+    padding: 20px 10px 0 10px;
+
+    .cart-product__head {
+      text-align: center;
+    }
 
     .cart-product__title {
       width: 100px;
@@ -35,18 +42,20 @@
   }
 }
 .cart-back-btn {
-  background-color: #5d988d;
-  width: 50px;
   text-align: center;
+  margin: 0 auto;
   font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
-  border-radius: 2px;
+
   margin: 100px 0 20px 10px;
 
   &__link {
     text-decoration: none;
     list-style: none;
     color: white;
+    background-color: #5d988d;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    border-radius: 2px;
   }
 }
 .sum-container {

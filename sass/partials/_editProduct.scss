@@ -1,21 +1,40 @@
 .edit-container {
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
   align-items: center;
-  filter: blur(8px);
+  margin-bottom: 200px;
+  padding-top: 50px;
+
+  //   filter: blur(8px);
+
+  .edit-content {
+    max-width: 600px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    margin-top: 50px;
+    text-align: center;
+  }
 
   .edit-item-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    div {
+      margin-top: 20px;
+    }
   }
 }
 
-#upload-form {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-  background-color: #5d988d;
+#descInput {
+  height: 200px;
+  width: 300px;
+}
+
+.upload-form {
+  visibility: hidden;
   display: flex;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  justify-content: space-between;
+  background-color: #5d988d;
   color: #fff;
   align-items: center;
   position: fixed;
@@ -25,8 +44,28 @@
   transform: translate(-50%, -50%);
   padding: 25px;
   width: 300px;
-  height: 20%;
+  height: 250px;
   overflow: auto;
   flex-direction: column;
   margin-top: 10px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+}
+
+.show-modal {
+  visibility: visible;
+}
+
+.edit-green {
+  color: #5d988d;
+  font-size: 20px;
+  font-family: "Roboto Serif", sans-serif;
+}
+
+.edit-red {
+  color: #985d68;
+  font-size: 20px;
+  font-family: "Roboto Serif", sans-serif;
 }

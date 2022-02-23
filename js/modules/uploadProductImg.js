@@ -2,7 +2,7 @@ import { getToken } from "../utils/storage.js";
 import { fetchProductToEdit } from "../editProduct.js";
 
 export async function addNewProductImg() {
-  const uploadForm = document.getElementById("upload-form");
+  const uploadForm = document.querySelector(".upload-form");
   const token = getToken();
   const uploadUrl = "http://localhost:1337/upload/";
   const uploadFiles = document.getElementById("inputFiles");
@@ -23,6 +23,7 @@ export async function addNewProductImg() {
       console.log("Img upload success");
       uploadFiles.value = "";
       fetchProductToEdit();
+      uploadForm.classList.toggle("show-modal");
     }
   } catch (error) {
     console.log(`Error: ${error}`);

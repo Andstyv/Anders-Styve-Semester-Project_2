@@ -74,6 +74,15 @@
 }
 
 // //NAVIGATION LARGE SCREENS
+@media (min-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav__list--admin {
+    margin: 0;
+  }
+}
 // .nav-container {
 //     display: flex;
 //     flex-direction: row;

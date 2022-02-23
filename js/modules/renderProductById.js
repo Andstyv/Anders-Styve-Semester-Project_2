@@ -24,7 +24,7 @@ async function fetchProductById(url) {
 
     console.log(product);
     container.innerHTML = `
-    <div class="back-btn"><a class="back-btn__link "href="products.html">Back</a></div>
+    <a class="btn-secondary "href="products.html">Back</a>
     <div class="specific-product__card">
     <div class="specific-product__image">
     <img class="specific-product__img" src="${baseUrl}${product.image.url}"></img></div>
@@ -32,10 +32,10 @@ async function fetchProductById(url) {
     <h3 class="specific-product__title">${product.title}</h3>
     <p class="specific-product__price">$${product.price}</p>
     <p class="specific-product__desc">${product.description}</p>
-    <div class="specific-product__cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
+    <div class="btn-main specific-product__cart" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
       product.image.url
     }"><i class="specific-product__cart--icon fas fa-shopping-cart"></i>Add to cart</div>
-    ${username ? `<a class="specific-product__edit" href="edit.html?id=${product.id}" >Edit article</a>` : ""}
+    ${username ? `<a class="btn-secondary" href="edit.html?id=${product.id}" >Edit product</a>` : ""}
     </div></div>
     `;
     const starFavBtn = document.querySelectorAll(".specific-product__cart");

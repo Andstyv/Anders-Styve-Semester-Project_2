@@ -5,22 +5,40 @@
   height: 100px;
   display: flex;
   align-items: center;
-  text-align: center;
-  font-family: "Staatliches", cursive;
-  color: #fff;
-  letter-spacing: 1px;
-  font-size: 12px;
-  padding: 0px 10px;
+  justify-content: center;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    font-family: "Staatliches", cursive;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 0px 5px;
+  }
 
   &__left {
-    width: 150px;
+    width: 100px;
     text-align: start;
   }
   &__mid {
-    width: 150px;
+    width: 100px;
   }
   &__right {
-    width: 150px;
+    width: 100px;
     text-align: end;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    justify-content: center;
+
+    &__content {
+      width: 1400px;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
   }
 }
