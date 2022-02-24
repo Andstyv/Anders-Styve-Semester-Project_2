@@ -165,6 +165,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: auto;
 }
 
 .footer__content {
@@ -280,6 +281,13 @@ main {
   margin-top: 0px;
   font-size: 18px;
   padding: 0px 50px;
+}
+
+.featured-title {
+  padding: 0px 50px;
+  margin-top: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -610,6 +618,7 @@ main {
 
 .cart-container {
   max-width: 900px;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -940,6 +949,14 @@ main {
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1,
