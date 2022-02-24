@@ -16,6 +16,7 @@ export function createNavMenu() {
   const navContainer = document.querySelector(".nav-container");
 
   navContainer.innerHTML = `
+  <div class="nav-content">
   <div class="nav__logo"><i class="fab fa-pushed"></i><p class="nav__logo--txt">shoos</p></div>
   <div class="nav__left">
     <ul class="nav__list">
@@ -29,5 +30,6 @@ export function createNavMenu() {
 ${authLink}
 ${logoutLink}
 </ul>
+</div>
 </div>`;
 }

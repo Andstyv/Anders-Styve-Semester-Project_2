@@ -2,10 +2,15 @@
 .nav-container {
   display: flex;
   flex-direction: column;
-  padding: 10px 50px;
+  background-color: #985d68;
+}
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
   align-items: center;
   justify-content: center;
-  background-color: #985d68;
+
   color: #fff;
 }
 .nav__logo {
@@ -78,6 +83,23 @@
   .nav-container {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .nav-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    justify-content: flex-start;
+  }
+  .nav__right {
+    justify-content: flex-end;
   }
   .nav__list--admin {
     margin: 0;
