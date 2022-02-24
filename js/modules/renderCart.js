@@ -26,8 +26,15 @@ export function renderCart(productsToRender) {
                             <img class="cart-product__img" src="${url}${product.image.url}"></img>
                             <h3 class="cart-product__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
                             </div>
-                            <p class="cart-product__qty">Qty: ${product.qty}</p>
-                            <p class="cart-product__price">$${product.price * product.qty}</p>
+                            <div class="cart-product__qty">
+                              <p>Qty:</p>
+                              <p>${product.qty}</p>
+
+                              </div>
+                            
+                            <div class="cart-product__price">
+                              <p>Price:</p>
+                              <p>$${product.price * product.qty}</p></div>
 
                             
                             <div class="cart-product__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
@@ -42,3 +49,12 @@ export function renderCart(productsToRender) {
     button.addEventListener("click", RemoveFromCart);
   });
 }
+
+// EDIT QUANTITY BTNS
+// <button id="btn-down" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${product.image.url}">down</button>
+// <button id="btn-up">up</button>
+
+// const down = document.getElementById("btn-down");
+// const up = document.getElementById("btn-up");
+
+// down.addEventListener("click", RemoveFromCart);

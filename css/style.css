@@ -140,11 +140,16 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    width: auto;
   }
   .nav__right {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    width: auto;
+  }
+  .nav__list {
+    gap: 80px;
   }
   .nav__list--admin {
     margin: 0;
