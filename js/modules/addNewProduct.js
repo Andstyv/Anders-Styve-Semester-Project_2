@@ -17,7 +17,7 @@ export function addNewProduct() {
       addContainer.innerHTML += `
           <div id="add-error"></div>
           <form class="add-form">
-          <button id="add-close-btn">Close</button>
+          <button class="btn-main" id="add-close-btn">Close</button>
           <div>
           <label for="productNameInput">Product Name</label>
           <input type="text" id="productNameInput" placeholder="Product Name" />

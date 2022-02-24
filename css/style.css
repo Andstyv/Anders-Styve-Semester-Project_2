@@ -140,13 +140,14 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    width: auto;
+    width: 150px;
   }
   .nav__right {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    width: auto;
+    width: 150px;
+    margin-right: 20px;
   }
   .nav__list {
     gap: 80px;
@@ -507,6 +508,10 @@ main {
   padding: 20px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+#add-close-btn {
+  margin-bottom: 20px;
 }
 
 .product__card {
