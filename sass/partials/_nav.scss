@@ -1,168 +1,117 @@
 //NAVIGATION
 .nav-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: #985d68;
-}
-.nav-content {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 20px;
-  align-items: center;
-  justify-content: center;
 
-  color: #fff;
-}
-.nav__logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 250px;
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    align-items: center;
+    color: #fff;
 
-  &--txt {
-    font-family: "Staatliches", cursive;
-    font-size: 36px;
-    margin: 10px 0 10px 5px;
-  }
-  i {
-    font-size: 48px;
-  }
-}
+    &__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 250px;
 
-.nav__right {
-  display: flex;
-  width: 250px;
-  justify-content: center;
-}
-.nav__list {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  padding: 0;
-  font-family: "Staatliches", cursive;
-  font-size: 25px;
+      &--txt {
+        font-family: "Staatliches", cursive;
+        font-size: 36px;
+        margin: 10px 0 10px 5px;
+      }
+      i {
+        font-size: 48px;
+      }
+    }
 
-  &--admin {
-    list-style: none;
-    font-family: "Staatliches", cursive;
-    font-size: 20px;
-    background-color: #5d988d;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0px 0 50px 0;
-    text-align: center;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    &__main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+    .nav-content__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 0;
+      font-family: "Staatliches", cursive;
+      font-size: 25px;
 
-    li {
-      padding: 2px 5px;
-
-      a {
+      .nav-content__link {
         text-decoration: none;
         color: #fff;
+
+        &--active {
+          color: #5d988d;
+        }
       }
-      button {
+    }
+
+    &__admin {
+      display: flex;
+      width: 250px;
+      justify-content: center;
+
+      .nav-content__adminlist {
+        list-style: none;
         font-family: "Staatliches", cursive;
-        margin-bottom: 5px;
+        font-size: 20px;
+        background-color: #5d988d;
+        border-radius: 5px;
+        padding: 0;
+        margin: 0px 0 50px 0;
+        text-align: center;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+        li {
+          padding: 2px 5px;
+
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+          button {
+            font-family: "Staatliches", cursive;
+            margin-bottom: 5px;
+          }
+        }
       }
     }
   }
 }
 
-.nav__link {
-  text-decoration: none;
-  list-style: none;
-  color: #fff;
-
-  &--active {
-    color: #5d988d;
-  }
-}
-
-// //NAVIGATION LARGE SCREENS
+//LARGE SCREENS
 @media (min-width: 768px) {
   .nav-container {
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
-  }
 
-  .nav-content {
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+    .nav-content {
+      width: 100%;
+      max-width: 1400px;
+      flex-direction: row;
 
-  .nav__logo {
-    justify-content: flex-start;
-    width: 150px;
-  }
-  .nav__right {
-    justify-content: flex-end;
-    width: 150px;
-    margin-right: 20px;
-  }
+      &__main {
+        margin: 0 100px;
+      }
 
-  .nav__list {
-    gap: 80px;
+      &__logo,
+      &__admin {
+        width: 200px;
+      }
+      &__list {
+        width: auto;
 
-    &--admin {
-      margin: 0;
+        &--admin {
+          margin: 0;
+        }
+      }
     }
   }
 }
-// .nav-container {
-//     display: flex;
-//     flex-direction: row;
-//     padding: 10px 50px;
-//     align-items: center;
-//     justify-content: space-between;
-//     background-color: #985d68;
-//     color: #fff;
-//   }
-//   .nav__logo {
-//     display: flex;
-//     align-items: center;
-//     width: 250px;
-
-//     &--txt {
-//       font-family: "Staatliches", cursive;
-//       font-size: 36px;
-//       margin-left: 5px;
-//     }
-//     i {
-//       font-size: 48px;
-//     }
-//   }
-
-//   .nav__right {
-//     display: flex;
-//     width: 250px;
-//     justify-content: end;
-//   }
-//   .nav__list {
-//     list-style: none;
-//     display: flex;
-//     gap: 40px;
-//     padding: 0;
-//     font-family: "Staatliches", cursive;
-//     font-size: 25px;
-
-//     &--admin {
-//       list-style: none;
-//       font-family: "Staatliches", cursive;
-//       font-size: 25px;
-//     }
-//   }
-
-//   .nav__link {
-//     text-decoration: none;
-//     list-style: none;
-//     color: #fff;
-
-//     &--active {
-//       color: #5d988d;
-//     }
-//   }

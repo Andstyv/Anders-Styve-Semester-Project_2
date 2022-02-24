@@ -2,6 +2,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -9,7 +12,7 @@
   background-color: #985d68;
 }
 
-.nav-content {
+.nav-container .nav-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,13 +24,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #fff;
 }
 
-.nav__logo {
+.nav-container .nav-content__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,17 +40,52 @@
   width: 250px;
 }
 
-.nav__logo--txt {
+.nav-container .nav-content__logo--txt {
   font-family: "Staatliches", cursive;
   font-size: 36px;
   margin: 10px 0 10px 5px;
 }
 
-.nav__logo i {
+.nav-container .nav-content__logo i {
   font-size: 48px;
 }
 
-.nav__right {
+.nav-container .nav-content__main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.nav-container .nav-content .nav-content__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+  font-size: 25px;
+}
+
+.nav-container .nav-content .nav-content__list .nav-content__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-container .nav-content .nav-content__list .nav-content__link--active {
+  color: #5d988d;
+}
+
+.nav-container .nav-content__admin {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,18 +95,7 @@
           justify-content: center;
 }
 
-.nav__list {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
-  padding: 0;
-  font-family: "Staatliches", cursive;
-  font-size: 25px;
-}
-
-.nav__list--admin {
+.nav-container .nav-content__admin .nav-content__adminlist {
   list-style: none;
   font-family: "Staatliches", cursive;
   font-size: 20px;
@@ -84,28 +108,18 @@
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 }
 
-.nav__list--admin li {
+.nav-container .nav-content__admin .nav-content__adminlist li {
   padding: 2px 5px;
 }
 
-.nav__list--admin li a {
+.nav-container .nav-content__admin .nav-content__adminlist li a {
   text-decoration: none;
   color: #fff;
 }
 
-.nav__list--admin li button {
+.nav-container .nav-content__admin .nav-content__adminlist li button {
   font-family: "Staatliches", cursive;
   margin-bottom: 5px;
-}
-
-.nav__link {
-  text-decoration: none;
-  list-style: none;
-  color: #fff;
-}
-
-.nav__link--active {
-  color: #5d988d;
 }
 
 @media (min-width: 768px) {
@@ -114,45 +128,26 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 100vw;
   }
-  .nav-content {
+  .nav-container .nav-content {
     width: 100%;
     max-width: 1400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
-  .nav__logo {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 150px;
+  .nav-container .nav-content__main {
+    margin: 0 100px;
   }
-  .nav__right {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 150px;
-    margin-right: 20px;
+  .nav-container .nav-content__logo, .nav-container .nav-content__admin {
+    width: 200px;
   }
-  .nav__list {
-    gap: 80px;
+  .nav-container .nav-content__list {
+    width: auto;
   }
-  .nav__list--admin {
+  .nav-container .nav-content__list--admin {
     margin: 0;
   }
 }
@@ -212,7 +207,7 @@
   }
 }
 
-main {
+.bg-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(20px, 1fr) minmax(300px, 900px) minmax(20px, 1fr);
@@ -221,7 +216,7 @@ main {
       grid-template-rows: minmax(50px, 150px) 100px minmax(50px, 150px);
 }
 
-.bg-left {
+.bg-grid__left {
   background-color: #985d68;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -230,7 +225,15 @@ main {
   grid-row: 1/3;
 }
 
-.bg-right {
+.bg-grid__mid {
+  background-color: #985d68;
+  text-align: center;
+  color: #fff;
+  word-spacing: 1px;
+  font-weight: 200;
+}
+
+.bg-grid__right {
   background-color: #985d68;
   -ms-grid-column: 3;
   grid-column: 3;
@@ -239,25 +242,17 @@ main {
   grid-row: 1/3;
 }
 
-.bg-mid {
-  background-color: #985d68;
-  text-align: center;
-  color: #fff !important;
-  word-spacing: 1px;
-  font-weight: 200 !important;
-}
-
-.bg-mid h1 {
+.bg-grid__title {
   margin: 0;
-  font-size: 38px;
+  font-size: 42px;
 }
 
-.bg-mid p {
+.bg-grid__title--text {
   margin-top: 5px;
   margin-bottom: 0px;
 }
 
-.bg-img {
+.bg-grid__headerimg {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 2;
@@ -266,7 +261,7 @@ main {
   max-width: 100%;
 }
 
-.img1 {
+.bg-grid__headerimg--img {
   max-width: 100%;
   max-height: 100%;
   min-width: 100%;
@@ -277,7 +272,7 @@ main {
           filter: drop-shadow(1px 1px 5px black);
 }
 
-.texter {
+.intro-text {
   text-align: center;
   margin-top: 0px;
   font-size: 18px;
@@ -292,11 +287,11 @@ main {
 }
 
 @media (min-width: 768px) {
-  .texter {
+  .intro-text {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  .bg-mid h1 {
+  .bg-grid__title {
     margin-top: 25px;
   }
 }
@@ -443,7 +438,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 1400px;
-  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 200px;
   gap: 10px;
