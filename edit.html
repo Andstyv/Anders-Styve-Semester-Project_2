@@ -16,14 +16,14 @@
       <a class="btn-secondary" href="products.html">Back</a>
       <div class="edit-content">
         <h1>Edit article</h1>
-        <div id="edit-error"></div>
+        <div id="edit-content__error"></div>
         <div id="loading">Loading...</div>
-        <div class="product-img"></div>
-        <button class="btn-secondary" id="upload-img-btn">Upload new product img</button>
-        <form class="edit-item-form">
+        <div class="edit-content__img"></div>
+        <button class="edit-content__upload-btn btn-secondary" id="upload-img-btn">Upload new product img</button>
+        <form class="edit-form">
           <div>
             <label for="productNameInput">Product Name</label>
-            <input type="text" id="productNameInput" placeholder="Product Name" />
+            <input type="text" minlength="4" id="productNameInput" placeholder="Product Name" />
           </div>
           <div>
             <label for="toggleFeatured">Featured</label>
@@ -35,23 +35,23 @@
           </div>
           <div>
             <label for="descInput">Description</label>
-            <textarea type="text" id="descInput" placeholder="Description"></textarea>
+            <textarea type="text" minlength="10" id="descInput" placeholder="Description"></textarea>
           </div>
-          <div>
+          <div class="edit-form__id">
             <input type="hidden" id="idInput" placeholder="ID" />
           </div>
-          <div class="edit-conf-msg"></div>
-          <div>
-            <button type="submit" class="btn-secondary" id="edit-btn">Update</button>
+          <div class="edit-form__msg"></div>
+          <div class="edit-form__update">
+            <button type="submit" class="btn-secondary" id="edit-btn">Update product</button>
           </div>
         </form>
-        <div class="delete-container">
-          <button type="button" class="btn-main delete-btn">Delete</button>
+        <div class="edit-content__delete">
+          <button type="button" class="btn-main delete-btn">Delete product</button>
         </div>
       </div>
       <form class="upload-form">
-        <div id="upload-exit" class="btn-exit">Exit</div>
-        <h2>Upload a file below</h2>
+        <div class="upload-form__exit">Exit</div>
+        <h2 class="upload-form__title">Upload a file below</h2>
         <input type="file" name="files" id="inputFiles" />
         <input type="text" name="ref" value="Products" hidden />
         <input type="text" name="refId" id="imageRefId" hidden />

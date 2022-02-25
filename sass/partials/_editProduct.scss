@@ -1,32 +1,68 @@
 .edit-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 200px;
-  padding-top: 50px;
-
-  //   filter: blur(8px);
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 10px;
 
   .edit-content {
-    max-width: 600px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-    padding: 10px 20px;
-    margin-top: 50px;
-    text-align: center;
-  }
-
-  .edit-item-form {
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    div {
-      margin-top: 20px;
+    gap: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    align-items: center;
+
+    &__delete {
+      margin-bottom: 20px;
+      margin-top: 0;
     }
   }
 }
 
-#descInput {
-  height: 200px;
-  width: 300px;
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 10px 20px;
+  div {
+    margin-top: 20px;
+  }
+
+  &__id {
+    display: none;
+    visibility: hidden;
+  }
+  &__update {
+    display: flex;
+    margin-top: 0 !important;
+
+    #edit-btn {
+      margin-top: 0 !important;
+    }
+  }
+  #descInput {
+    height: 200px;
+    width: 300px;
+  }
+
+  &__msg {
+    font-size: 20px;
+    font-family: "Roboto Serif", sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &--green {
+      color: #5d988d;
+    }
+    &--red {
+      color: #985d68;
+    }
+  }
 }
 
 .upload-form {
@@ -40,7 +76,7 @@
   position: fixed;
   z-index: 999;
   left: 50%;
-  top: 60%;
+  top: 62%;
   transform: translate(-50%, -50%);
   padding: 25px;
   width: 300px;
@@ -49,23 +85,20 @@
   flex-direction: column;
   margin-top: 10px;
 
-  h2 {
+  &__exit {
+    border: 1px solid #fff;
+    padding: 5px;
+    font-family: "Roboto Serif", sans-serif;
+    border-radius: 2px;
+  }
+
+  &__title {
     margin-bottom: 50px;
   }
+  #inputFiles {
+    margin-bottom: 10px;
+  }
 }
-
 .show-modal {
   visibility: visible;
-}
-
-.edit-green {
-  color: #5d988d;
-  font-size: 20px;
-  font-family: "Roboto Serif", sans-serif;
-}
-
-.edit-red {
-  color: #985d68;
-  font-size: 20px;
-  font-family: "Roboto Serif", sans-serif;
 }

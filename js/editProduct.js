@@ -21,8 +21,8 @@ logout();
 if (!token) {
   location.href = "/";
 }
-const productImg = document.querySelector(".product-img");
-const editForm = document.querySelector(".edit-item-form");
+const productImg = document.querySelector(".edit-content__img");
+const editForm = document.querySelector(".edit-form");
 const productName = document.getElementById("productNameInput");
 const toggleFeatured = document.getElementById("toggleFeatured");
 const price = document.getElementById("priceInput");
@@ -33,7 +33,7 @@ const loadingMsg = document.getElementById("loading");
 const imgRefId = document.getElementById("imageRefId");
 const imgUploadBtn = document.getElementById("upload-img-btn");
 const uploadForm = document.querySelector(".upload-form");
-const uploadExitBtn = document.getElementById("upload-exit");
+const uploadExitBtn = document.querySelector(".upload-form__exit");
 
 imgUploadBtn.addEventListener("click", toggleUploadModal);
 uploadExitBtn.addEventListener("click", toggleUploadModal);
@@ -92,7 +92,7 @@ function sumbitEditForm(e) {
 
 async function updateProduct(title, description, price, featured, id) {
   const data = JSON.stringify({ title: title, description: description, price: price, featured: featured });
-  const editConfMsg = document.querySelector(".edit-conf-msg");
+  const editConfMsg = document.querySelector(".edit-form__msg");
 
   const options = {
     method: "PUT",
@@ -108,11 +108,11 @@ async function updateProduct(title, description, price, featured, id) {
     const json = await response.json();
 
     if (json.updated_at) {
-      editConfMsg.classList.add("edit-green");
+      editConfMsg.classList.add("edit-form__msg--green");
       editConfMsg.innerHTML = `<i class="far fa-check-circle"></i> Successfully updated`;
     }
   } catch (error) {
-    editConfMsg.classList.add("edit-red");
+    editConfMsg.classList.add("edit-form__msg--red");
     editConfMsg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Error: ${error}`;
   }
 }
