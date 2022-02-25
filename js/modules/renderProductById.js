@@ -26,7 +26,7 @@ async function fetchProductById(url) {
     console.log(product);
     container.innerHTML = `
     <a class="btn-secondary "href="products.html">Back</a>
-    <div class="specific-product__card">
+    <div class="specific-product">
     <div class="specific-product__image">
     ${hasImage ? `<img class="specific-product__img" src="${baseUrl + product.image.url}"></img>` : `<img class="specific-product__img">No image yet</img>`}</div>
 

@@ -310,10 +310,10 @@
           justify-content: center;
   margin: 0 auto;
   margin-top: 50px;
-  padding: 0 50px;
+  padding: 0 10px;
 }
 
-.specific-product__card {
+.specific-product {
   margin-top: 20px;
   margin-bottom: 100px;
   border-radius: 5px;
@@ -335,7 +335,7 @@
   width: 100%;
 }
 
-.specific-product__img {
+.specific-product__image .specific-product__img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -346,7 +346,7 @@
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-.specific-product__img:hover {
+.specific-product__image .specific-product__img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -373,6 +373,15 @@
   font-size: 20px;
 }
 
+.specific-product__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  word-break: break-word;
+}
+
 .specific-product__cart {
   text-decoration: none;
   -ms-flex-item-align: center;
@@ -390,37 +399,6 @@
 
 .specific-product__cart--icon {
   margin-right: 10px;
-}
-
-.specific-product__edit {
-  text-decoration: none;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 5px;
-  background-color: #5d988d;
-  border-radius: 2px;
-  font-size: 20px;
-  color: #fff;
-  margin: 20px 0 10px 0;
-  text-transform: uppercase;
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
-}
-
-.back-btn {
-  background-color: #5d988d;
-  width: 50px;
-  text-align: center;
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
-  border-radius: 2px;
-}
-
-.back-btn__link {
-  text-decoration: none;
-  list-style: none;
-  color: white;
 }
 
 .products-title {
