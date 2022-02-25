@@ -41,6 +41,7 @@
   max-width: 1400px;
   margin: 0 auto;
   align-items: center;
+  border-radius: 5px;
 }
 #add-new {
   margin-bottom: 20px;
@@ -49,17 +50,35 @@
 
 .add-form {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
   padding: 10px;
   min-width: 300px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    border-top: 1px dashed #000;
+    padding-top: 20px;
+    margin-top: 10px !important;
+    font-size: 22px;
+  }
+  label {
+    margin-bottom: 2px !important;
+  }
+  #toggleFeatured {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+  }
 }
 
 #add-close-btn {
   margin-bottom: 20px;
   background-color: #985d68 !important;
+  margin-bottom: 0 !important;
 }
 
 #descInput {
