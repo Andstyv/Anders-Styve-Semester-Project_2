@@ -53,7 +53,6 @@ export function addNewProduct() {
 
 function submitAddForm(e) {
   e.preventDefault();
-  console.log("added");
 
   const productName = document.getElementById("productNameInput");
   const featured = document.getElementById("toggleFeatured");
@@ -88,7 +87,6 @@ async function addProductDetails(name, featured, price, desc) {
     const json = await response.json();
 
     if (json.created_at) {
-      console.log("New product added");
       editConfMsg.classList.add("edit-green");
       editConfMsg.innerHTML = `<i class="far fa-check-circle"></i> Successfully updated`;
     }

@@ -17,20 +17,6 @@ function submitLoginForm(e) {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
-  username.style.borderColor = "black";
-  password.style.borderColor = "black";
-
-  if (usernameValue.length === 0) {
-    errorContainer.innerHTML = "Username cannot be blank";
-    username.style.borderColor = "red";
-    password.style.borderTop = "1px solid red";
-    return;
-  }
-  if (passwordValue.length === 0) {
-    errorContainer.innerHTML = "Password cannot be blank";
-    password.style.borderColor = "red";
-    return;
-  }
   tryToLogin(usernameValue, passwordValue);
 }
 
@@ -60,6 +46,6 @@ async function tryToLogin(username, password) {
       errorContainer.innerHTML = `Error: ${json.message[0].messages[0].message}`;
     }
   } catch (error) {
-    errorContainer.innerHTML = `${error}`;
+    errorContainer.innerHTML = `Error: ${error}`;
   }
 }

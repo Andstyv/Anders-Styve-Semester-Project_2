@@ -39,9 +39,3 @@ export function addToCart() {
 function saveCart(items) {
   localStorage.setItem("CartItems", JSON.stringify(items));
 }
-
-// else {
-//   const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
-//   saveCart(newCartProducts);
-//   itemsInCartTracker();
-// }

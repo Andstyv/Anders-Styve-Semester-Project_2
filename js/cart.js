@@ -4,7 +4,6 @@ import { logout } from "./modules/logout.js";
 import { renderCart } from "./modules/renderCart.js";
 
 let itemsInCart = getCartItems();
-console.log(itemsInCart);
 
 createNavMenu();
 logout();

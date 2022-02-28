@@ -101,9 +101,12 @@
         margin: 0 100px;
       }
 
-      &__logo,
+      &__logo {
+        width: 200px;
+      }
       &__admin {
         width: 200px;
+        justify-content: flex-end;
       }
       &__list {
         width: auto;

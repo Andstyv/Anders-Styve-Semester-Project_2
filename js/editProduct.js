@@ -52,7 +52,6 @@ export async function fetchProductToEdit() {
   try {
     const response = await fetch(productUrl);
     const product = await response.json();
-    console.log(product);
 
     const hasImage = product.image;
 
@@ -120,5 +119,4 @@ async function updateProduct(title, description, price, featured, id) {
 uploadForm.addEventListener("submit", (e) => {
   e.preventDefault();
   addNewProductImg();
-  console.log("Updating product img");
 });

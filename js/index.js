@@ -22,8 +22,7 @@ export async function fetchFeaturedProducts() {
         return true;
       }
     });
-    console.log(featuredProducts);
-    console.log(products);
+
     renderProducts(featuredProducts);
     logout();
   } catch (error) {
@@ -44,7 +43,6 @@ async function fetchHeaderImg() {
     let headerImg = json;
 
     img.innerHTML = `<img class="bg-grid__headerimg--img" src="${url}${headerImg.hero_banner.url}" alt="${headerImg.hero_banner_alt_text}" />`;
-    console.log(headerImg);
   } catch (error) {
     console.log(error);
   }
