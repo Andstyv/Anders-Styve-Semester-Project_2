@@ -3,13 +3,13 @@ import { createNavMenu } from "./createNavMenu.js";
 import { logout } from "./logout.js";
 import { getUserName } from "../utils/storage.js";
 import { itemsInCartTracker } from "./itemsInCartTracker.js";
+import { baseUrl, productsUrl } from "../utils/APIUrls.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const baseUrl = "http://localhost:1337";
-const productUrl = baseUrl + "/products/" + id;
+const productUrl = productsUrl + "/" + id;
 const container = document.querySelector(".specific-product-container");
 
 createNavMenu();
@@ -23,7 +23,6 @@ async function fetchProductById(url) {
     const username = getUserName();
     const hasImage = product.image;
 
-    console.log(product);
     container.innerHTML = `
     <a class="btn-secondary "href="products.html">Back</a>
     <div class="specific-product">
@@ -50,5 +49,3 @@ async function fetchProductById(url) {
 }
 
 fetchProductById(productUrl);
-
-// <img class="specific-product__img" src="${hasImage ? baseUrl + product.image.url : "#"} "></img></div>

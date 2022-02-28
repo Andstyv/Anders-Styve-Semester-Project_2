@@ -1,10 +1,10 @@
 import { getToken } from "../utils/storage.js";
 import { fetchProductToEdit } from "../editProduct.js";
+import { uploadUrl } from "../utils/APIUrls.js";
 
 export async function addNewProductImg() {
   const uploadForm = document.querySelector(".upload-form");
   const token = getToken();
-  const uploadUrl = "http://localhost:1337/upload/";
   const uploadFiles = document.getElementById("inputFiles");
 
   const options = {
@@ -20,7 +20,6 @@ export async function addNewProductImg() {
     const json = await response.json();
 
     if (json[0].created_at) {
-      console.log("Img upload success");
       uploadFiles.value = "";
       fetchProductToEdit();
       uploadForm.classList.toggle("show-modal");

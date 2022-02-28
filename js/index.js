@@ -2,17 +2,14 @@ import { createNavMenu } from "./modules/createNavMenu.js";
 import { itemsInCartTracker } from "./modules/itemsInCartTracker.js";
 import { logout } from "./modules/logout.js";
 import { renderProducts } from "./modules/renderProducts.js";
-
-const url = "http://localhost:1337";
+import { baseUrl, productsUrl } from "./utils/APIUrls.js";
 
 createNavMenu();
 itemsInCartTracker();
 
 export async function fetchFeaturedProducts() {
   try {
-    const productsURL = url + "/products/";
-
-    const response = await fetch(productsURL);
+    const response = await fetch(productsUrl);
     const json = await response.json();
 
     let products = json;
@@ -34,7 +31,7 @@ fetchFeaturedProducts();
 
 async function fetchHeaderImg() {
   try {
-    const headerImgUrl = url + "/home/";
+    const headerImgUrl = baseUrl + "/home/";
     const img = document.querySelector(".bg-grid__headerimg");
 
     const response = await fetch(headerImgUrl);
@@ -42,7 +39,7 @@ async function fetchHeaderImg() {
 
     let headerImg = json;
 
-    img.innerHTML = `<img class="bg-grid__headerimg--img" src="${url}${headerImg.hero_banner.url}" alt="${headerImg.hero_banner_alt_text}" />`;
+    img.innerHTML = `<img class="bg-grid__headerimg--img" src="${baseUrl}${headerImg.hero_banner.url}" alt="${headerImg.hero_banner_alt_text}" />`;
   } catch (error) {
     console.log(error);
   }

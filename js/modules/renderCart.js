@@ -1,6 +1,5 @@
 import { RemoveFromCart } from "./removeFromCart.js";
-
-const url = "http://localhost:1337";
+import { baseUrl } from "../utils/APIUrls.js";
 
 export function renderCart(productsToRender) {
   const container = document.querySelector(".cart-container");
@@ -23,7 +22,7 @@ export function renderCart(productsToRender) {
     container.innerHTML += `
                             <div class="cart-card">
                             <div class="cart-card__head">
-                            <img class="cart-card__img" src="${url}${product.image.url}"></img>
+                            <img class="cart-card__img" src="${baseUrl}${product.image.url}"></img>
                             <h3 class="cart-card__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
                             </div>
                             <div class="cart-card__qty">

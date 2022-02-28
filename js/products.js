@@ -4,8 +4,7 @@ import { createNavMenu } from "./modules/createNavMenu.js";
 import { addNewProduct } from "./modules/addNewProduct.js";
 import { filterProducts } from "./modules/filterProducts.js";
 import { itemsInCartTracker } from "./modules/itemsInCartTracker.js";
-
-const url = "http://localhost:1337/products/";
+import { productsUrl } from "./utils/APIUrls.js";
 
 createNavMenu();
 addNewProduct();
@@ -13,7 +12,7 @@ itemsInCartTracker();
 
 export async function fetchProducts() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(productsUrl);
     const json = await response.json();
 
     let products = json;

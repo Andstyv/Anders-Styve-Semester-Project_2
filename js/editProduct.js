@@ -3,15 +3,13 @@ import { createNavMenu } from "./modules/createNavMenu.js";
 import { logout } from "./modules/logout.js";
 import { deleteProduct } from "./modules/deleteProduct.js";
 import { addNewProductImg } from "./modules/uploadProductImg.js";
+import { baseUrl, productsUrl } from "./utils/APIUrls.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const baseUrl = "http://localhost:1337";
-const url = "http://localhost:1337/products/";
-
-const productUrl = url + id;
+const productUrl = productsUrl + "/" + id;
 
 const token = getToken();
 

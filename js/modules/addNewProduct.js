@@ -1,6 +1,5 @@
 import { getToken, getUserName } from "../utils/storage.js";
-
-const baseUrl = "http://localhost:1337/products";
+import { productsUrl } from "../utils/APIUrls.js";
 
 export function addNewProduct() {
   const addContainer = document.querySelector(".add-container");
@@ -83,7 +82,7 @@ async function addProductDetails(name, featured, price, desc) {
   };
 
   try {
-    const response = await fetch(baseUrl, options);
+    const response = await fetch(productsUrl, options);
     const json = await response.json();
 
     if (json.created_at) {

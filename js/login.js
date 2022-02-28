@@ -1,7 +1,6 @@
 import { createNavMenu } from "./modules/createNavMenu.js";
 import { saveToken, saveUser } from "./utils/storage.js";
-
-const url = "http://localhost:1337";
+import { baseUrl } from "./utils/APIUrls.js";
 
 const loginForm = document.querySelector(".login-form");
 const username = document.getElementById("usernameInput");
@@ -21,7 +20,7 @@ function submitLoginForm(e) {
 }
 
 async function tryToLogin(username, password) {
-  const loginUrl = url + "/auth/local";
+  const loginUrl = baseUrl + "/auth/local";
 
   const data = JSON.stringify({ identifier: username, password: password });
 

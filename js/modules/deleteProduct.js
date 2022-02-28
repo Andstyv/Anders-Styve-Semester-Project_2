@@ -1,4 +1,5 @@
 import { getToken } from "../utils/storage.js";
+import { productsUrl } from "../utils/APIUrls.js";
 
 export function deleteProduct(id) {
   const deleteBtn = document.querySelector(".delete-btn");
@@ -8,7 +9,7 @@ export function deleteProduct(id) {
 
     if (confirmDelete) {
       const token = getToken();
-      const deleteUrl = "http://localhost:1337/products/" + id;
+      const deleteUrl = productsUrl + "/" + id;
 
       const options = {
         method: "DELETE",

@@ -28,14 +28,3 @@ export function RemoveFromCart() {
 function saveCart(items) {
   localStorage.setItem("CartItems", JSON.stringify(items));
 }
-
-// productExists.qty = productExists.qty + quantity;
-// saveCart(currentInCart);
-
-// const productExists = currentInCart.find(function (cartProducts) {
-//   return cartProducts.id === id;
-// });
-
-// const newCartProducts = currentInCart.filter((prod) => prod.id !== id);
-// saveCart(newCartProducts);
-// renderCart(newCartProducts);
