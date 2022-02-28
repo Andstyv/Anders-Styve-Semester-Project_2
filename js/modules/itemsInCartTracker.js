@@ -1,7 +1,8 @@
 import { getCartItems } from "./getCartItems.js";
 
 export function itemsInCartTracker() {
-  const shopcart = document.querySelector(".shopcart");
+  const cartWidgetLink = document.querySelector(".cart-widget__link");
+  const cartWidget = document.querySelector(".cart-widget");
   let itemsInCart = getCartItems();
 
   let totalNumberOfProducts = 0;
@@ -11,12 +12,14 @@ export function itemsInCartTracker() {
   console.log(totalNumberOfProducts);
 
   if (!itemsInCart.length) {
-    shopcart.style.display = "none";
+    cartWidgetLink.style.display = "none";
+    cartWidget.style.display = "none";
   } else {
-    shopcart.style.display = "block";
+    cartWidgetLink.style.display = "flex";
+    cartWidget.style.display = "flex";
   }
 
-  shopcart.innerHTML = `<div class="cart-widget-content">
+  cartWidgetLink.innerHTML = `<div class="cart-widget__content">
                             <i class="fas fa-shopping-bag"></i><span>${itemsInCart.length ? totalNumberOfProducts : ""}</span>
                         </div>`;
 }

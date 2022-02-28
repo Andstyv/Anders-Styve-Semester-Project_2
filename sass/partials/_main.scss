@@ -25,6 +25,7 @@
 
   &__title {
     margin: 0;
+    margin-bottom: 15px;
     font-size: 42px;
 
     &--text {
@@ -60,6 +61,11 @@
   margin-top: 50px;
   max-width: 1400px;
   margin: 0 auto;
+
+  h3 {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
 }
 
 // LARGE SCREENS

@@ -65,7 +65,7 @@
         background-color: #5d988d;
         border-radius: 5px;
         padding: 0;
-        margin: 0px 0 50px 0;
+        // margin: 0px 0 50px 0;
         text-align: center;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 
@@ -90,7 +90,7 @@
 @media (min-width: 768px) {
   .nav-container {
     flex-direction: row;
-    width: 100vw;
+    // width: 100vw;
 
     .nav-content {
       width: 100%;

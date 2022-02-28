@@ -10,7 +10,7 @@ export function renderCart(productsToRender) {
 
   if (!productsToRender.length) {
     console.log("empty");
-    container.innerHTML = "Empty";
+    container.innerHTML = `<div class="cart-container__empty">Cart is empty</div>`;
   }
 
   let totalPrice = 0;
@@ -21,30 +21,30 @@ export function renderCart(productsToRender) {
 
   productsToRender.forEach((product) => {
     container.innerHTML += `
-                            <div class="cart__card">
-                            <div class="cart-product__head">
-                            <img class="cart-product__img" src="${url}${product.image.url}"></img>
-                            <h3 class="cart-product__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
+                            <div class="cart-card">
+                            <div class="cart-card__head">
+                            <img class="cart-card__img" src="${url}${product.image.url}"></img>
+                            <h3 class="cart-card__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
                             </div>
-                            <div class="cart-product__qty">
+                            <div class="cart-card__qty">
                               <p>Qty:</p>
                               <p>${product.qty}</p>
 
                               </div>
                             
-                            <div class="cart-product__price">
+                            <div class="cart-card__price">
                               <p>Price:</p>
                               <p>$${product.price * product.qty}</p></div>
 
                             
-                            <div class="cart-product__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
+                            <div class="cart-card__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
       product.image.url
     }"><i class="cart-product__icon fas fa-times-circle"></i>Remove</div>
                             </div>
                             `;
   });
 
-  const starFavBtn = document.querySelectorAll(".cart-product__remove");
+  const starFavBtn = document.querySelectorAll(".cart-card__remove");
   starFavBtn.forEach((button) => {
     button.addEventListener("click", RemoveFromCart);
   });

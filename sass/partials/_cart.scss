@@ -9,7 +9,7 @@
   margin-top: 0px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 
-  .cart__card {
+  .cart-card {
     display: flex;
     align-items: center;
     margin: 20px 10px;
@@ -18,28 +18,33 @@
     border-bottom: 1px dashed lightgray;
     padding: 20px 10px 0 10px;
 
-    .cart-product__head {
+    &__head {
       text-align: center;
     }
 
-    .cart-product__title {
+    &__title {
       width: 100px;
       word-wrap: break-word;
     }
 
-    .cart-product__img {
+    &__img {
       width: 100px;
       height: 100px;
       object-fit: cover;
     }
-    .cart-product__remove {
+    &__remove {
       cursor: pointer;
       font-family: "Staatliches", cursive;
     }
-    .cart-product__icon {
+    &__icon {
       margin-right: 5px;
       color: #985d68;
     }
+  }
+  &__empty {
+    font-family: "Staatliches", cursive;
+    text-align: center;
+    margin: 10px 0;
   }
 }
 .cart-back-btn {
@@ -61,25 +66,27 @@
 }
 .sum-container {
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
   display: flex;
-  justify-content: flex-end;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   font-size: 25px;
   font-weight: bolder;
-  margin-bottom: 200px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 
   &__total {
     display: flex;
+    justify-content: flex-end;
     margin-right: 20px;
+    width: 100%;
   }
 }
 
-.shopcart {
+.cart-widget {
   background-color: #985d68;
   display: flex;
-  text-align: center;
+  justify-content: center;
   width: 75px;
   height: 75px;
   position: fixed;
@@ -88,9 +95,10 @@
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 
-  .cart-widget-content {
+  &__content {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     i {
       color: #fff;

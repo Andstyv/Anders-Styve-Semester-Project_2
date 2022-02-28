@@ -4,19 +4,19 @@ import { getUserName } from "../utils/storage.js";
 const url = "http://localhost:1337";
 
 export function renderProducts(productsToRender) {
-  const container = document.querySelector(".container");
+  const container = document.querySelector(".products-container");
   const username = getUserName();
 
   container.innerHTML = "";
 
   productsToRender.forEach((product) => {
     const hasImage = product.image;
-    container.innerHTML += `<div class="product__card">
-                              <div class="product__image">
-                              ${hasImage ? `<img class="product__img" src="${url}${product.image.url}"></img>` : `<div>No image yet</div>`}</div>
-                              <div class="product__content">
-                              <h3 class="product__title">${product.title}</h3>
-                              <p class="product__price">$${product.price}</p>
+    container.innerHTML += `<div class="product-card">
+                              <div class="product-card__image">
+                              ${hasImage ? `<img class="product-card__img" src="${url}${product.image.url}"></img>` : `<div>No image yet</div>`}</div>
+                              <div class="product-card__content">
+                              <h3 class="product-card__title">${product.title}</h3>
+                              <p class="product-card__price">$${product.price}</p>
                               <div class="btn-container">
                               <a class ="btn-secondary" href="product.html?id=${product.id}">Explore</a></div>
                               <div class="btn-container">
