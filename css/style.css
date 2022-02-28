@@ -339,6 +339,7 @@
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  min-width: 300px;
 }
 
 .specific-product__image {
@@ -536,6 +537,7 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 
 .add-container #add-new {

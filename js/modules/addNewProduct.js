@@ -88,6 +88,9 @@ async function addProductDetails(name, featured, price, desc) {
     if (json.created_at) {
       editConfMsg.classList.add("edit-green");
       editConfMsg.innerHTML = `<i class="far fa-check-circle"></i> Successfully updated`;
+      setTimeout(() => {
+        location.href = "/products.html";
+      }, 1000);
     }
   } catch (error) {
     console.log(error);
