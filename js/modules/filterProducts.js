@@ -2,7 +2,7 @@ import { renderProducts } from "./renderProducts.js";
 
 export function filterProducts(products) {
   const searchFilter = document.getElementById("filter-products");
-  const container = document.querySelector(".container");
+  const filterContainer = document.querySelector(".products-container");
 
   searchFilter.onkeyup = function (e) {
     const searchValue = e.target.value.toLowerCase();
@@ -14,7 +14,7 @@ export function filterProducts(products) {
         }
       });
       if (!filteredProducts.length) {
-        container.innerHTML = "No products found";
+        filterContainer.innerHTML = `<div id="filter-empty-text">No products found</div>`;
       } else {
         renderProducts(filteredProducts);
       }

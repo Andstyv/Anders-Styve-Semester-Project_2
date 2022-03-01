@@ -1,3 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,12 +265,20 @@
 .bg-grid__title {
   margin: 0;
   margin-bottom: 15px;
-  font-size: 42px;
+  font-size: 46px;
+  letter-spacing: 2px;
 }
 
 .bg-grid__title--text {
   margin-top: 5px;
   margin-bottom: 0px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.bg-grid__title--text span {
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .bg-grid__headerimg {
@@ -271,8 +297,8 @@
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: drop-shadow(1px 1px 5px black);
-          filter: drop-shadow(1px 1px 5px black);
+  -webkit-filter: drop-shadow(1px 1px 5px #000);
+          filter: drop-shadow(1px 1px 5px #000);
 }
 
 .intro-text {
@@ -280,6 +306,8 @@
   margin-top: 0px;
   font-size: 18px;
   padding: 0px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .featured-title {
@@ -403,21 +431,6 @@ p {
   word-break: break-word;
 }
 
-.specific-product__cart {
-  text-decoration: none;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-family: "Staatliches", cursive;
-  padding: 5px;
-  cursor: pointer;
-  background-color: #b93d51;
-  border-radius: 2px;
-  color: #fff;
-  margin: 20px 0 10px 0;
-  text-transform: uppercase;
-}
-
 .specific-product__cart--icon {
   margin-right: 10px;
 }
@@ -513,6 +526,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: "Roboto Serif", sans-serif;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -532,6 +546,11 @@ p {
   padding: 0;
 }
 
+#filter-empty-text {
+  font-family: "Staatliches", cursive, serif;
+  font-size: 20px;
+}
+
 .add-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,15 +568,11 @@ p {
   margin-bottom: 50px;
 }
 
-.add-container #add-new {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
 .add-container .add-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: "Roboto Serif", sans-serif;
   margin-top: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -571,12 +586,6 @@ p {
   min-width: 300px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
-}
-
-.add-container .add-form #add-close-btn {
-  margin-bottom: 20px;
-  background-color: #985d68 !important;
-  margin-bottom: 0 !important;
 }
 
 .add-container .add-form__title {
@@ -721,6 +730,7 @@ p {
           justify-content: flex-end;
   margin-right: 20px;
   width: 100%;
+  font-size: 25px;
 }
 
 .cart-widget {
@@ -767,6 +777,18 @@ p {
   color: #000;
 }
 
+.cart-title-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .login-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -804,6 +826,35 @@ p {
 
 #login-form__password #passwordInput {
   padding: 5px;
+}
+
+.btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-main,
+.btn-secondary {
+  padding: 5px;
+  font-size: 20px;
+  background-color: #985d68;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Staatliches", cursive, serif;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.btn-secondary {
+  background-color: #5d988d !important;
 }
 
 .edit-container {
@@ -947,64 +998,5 @@ p {
 
 .show-modal {
   visibility: visible;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.btn-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.btn-main {
-  padding: 5px;
-  margin-top: 5px;
-  font-size: 20px;
-  background-color: #985d68;
-  border-radius: 2px;
-  color: #fff;
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-.btn-secondary {
-  padding: 5px;
-  margin-top: 5px;
-  font-size: 20px;
-  background-color: #5d988d;
-  border-radius: 2px;
-  color: #fff;
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  margin: 0 auto;
-  margin-top: 10px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */

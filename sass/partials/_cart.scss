@@ -80,6 +80,7 @@
     justify-content: flex-end;
     margin-right: 20px;
     width: 100%;
+    font-size: 25px;
   }
 }
 
@@ -114,4 +115,12 @@
       color: getColor(text-black);
     }
   }
+}
+
+.cart-title-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
 }

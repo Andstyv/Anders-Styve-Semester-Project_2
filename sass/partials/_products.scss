@@ -63,6 +63,7 @@
 .filter-container {
   display: flex;
   flex-direction: column;
+  font-family: $font-secondary;
   max-width: 300px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -80,6 +81,11 @@
   }
 }
 
+#filter-empty-text {
+  font-family: $font-primary;
+  font-size: 20px;
+}
+
 // ADD NEW PRODUCT
 .add-container {
   display: flex;
@@ -90,13 +96,9 @@
   border-radius: 5px;
   margin-bottom: 50px;
 
-  #add-new {
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
   .add-form {
     display: flex;
+    font-family: $font-secondary;
     margin-top: 20px;
     flex-direction: column;
     align-items: flex-start;
@@ -105,16 +107,10 @@
     min-width: 300px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 
-    #add-close-btn {
-      margin-bottom: 20px;
-      background-color: #985d68 !important;
-      margin-bottom: 0 !important;
-    }
-
     &__title {
       text-align: center;
       width: 100%;
-      border-top: 1px dashed #000;
+      border-top: 1px dashed getColor(text-black);
       padding-top: 20px;
       margin-top: 10px !important;
       font-size: 22px;
