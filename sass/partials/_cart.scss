@@ -34,15 +34,15 @@
     }
     &__remove {
       cursor: pointer;
-      font-family: "Staatliches", cursive;
+      font-family: $font-primary;
     }
     &__icon {
       margin-right: 5px;
-      color: #985d68;
+      color: getColor(primary);
     }
   }
   &__empty {
-    font-family: "Staatliches", cursive;
+    font-family: $font-primary;
     text-align: center;
     margin: 10px 0;
   }
@@ -50,7 +50,7 @@
 .cart-back-btn {
   text-align: center;
   margin: 0 auto;
-  font-family: "Staatliches", cursive;
+  font-family: $font-primary;
 
   margin: 100px 0 20px 10px;
 
@@ -58,7 +58,7 @@
     text-decoration: none;
     list-style: none;
     color: white;
-    background-color: #5d988d;
+    background-color: getColor(secondary);
     padding: 5px 10px;
     letter-spacing: 1px;
     border-radius: 2px;
@@ -84,7 +84,7 @@
 }
 
 .cart-widget {
-  background-color: #985d68;
+  background-color: getColor(primary);
   display: flex;
   justify-content: center;
   width: 75px;
@@ -101,7 +101,7 @@
     text-align: center;
 
     i {
-      color: #fff;
+      color: getColor(bg-white);
       font-size: 64px;
       margin-top: 5px;
     }
@@ -109,9 +109,9 @@
       position: absolute;
       top: 33px;
       left: 31px;
-      font-family: "Staatliches", cursive;
+      font-family: $font-primary;
       font-size: 32px;
-      color: #000;
+      color: getColor(text-black);
     }
   }
 }

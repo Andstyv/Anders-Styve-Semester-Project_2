@@ -12,7 +12,7 @@ export function renderProducts(productsToRender) {
     const hasImage = product.image;
     container.innerHTML += `<div class="product-card">
                               <div class="product-card__image">
-                              ${hasImage ? `<img class="product-card__img" src="${baseUrl}${product.image.url}"></img>` : `<div>No image yet</div>`}</div>
+                              ${hasImage ? `<img class="product-card__img" src="${baseUrl}${product.image.url}" alt="${product.image.alternativeText}"></img>` : `<div>No image yet</div>`}</div>
                               <div class="product-card__content">
                               <h3 class="product-card__title">${product.title}</h3>
                               <p class="product-card__price">$${product.price}</p>

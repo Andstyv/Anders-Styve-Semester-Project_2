@@ -1,7 +1,7 @@
 // FOOTER
 
 .footer {
-  background-color: #985d68;
+  background-color: getColor(primary);
   height: 100px;
   display: flex;
   align-items: center;
@@ -10,8 +10,8 @@
   &__content {
     display: flex;
     justify-content: space-between;
-    font-family: "Staatliches", cursive;
-    color: #fff;
+    font-family: $font-primary;
+    color: getColor(bg-white);
     letter-spacing: 1px;
     font-size: 12px;
     padding: 0px 5px;

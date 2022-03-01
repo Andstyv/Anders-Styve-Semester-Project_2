@@ -1,0 +1,13 @@
+$font-primary: "Staatliches", cursive, serif;
+$font-secondary: "Roboto Serif", sans-serif;
+
+$colors: (
+  primary: #985d68,
+  secondary: #5d988d,
+  text-black: #000,
+  bg-white: #fff,
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}

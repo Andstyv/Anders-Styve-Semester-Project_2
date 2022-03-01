@@ -29,6 +29,7 @@
   flex-direction: column;
   text-align: start;
   padding: 10px 20px;
+  font-family: $font-secondary;
   div {
     margin-top: 20px;
   }
@@ -52,15 +53,15 @@
 
   &__msg {
     font-size: 20px;
-    font-family: "Roboto Serif", sans-serif;
+    font-family: $font-secondary;
     margin-bottom: 20px;
     text-align: center;
 
     &--green {
-      color: #5d988d;
+      color: getColor(secondary);
     }
     &--red {
-      color: #985d68;
+      color: getColor(primary);
     }
   }
 }
@@ -70,8 +71,8 @@
   display: flex;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   justify-content: space-between;
-  background-color: #5d988d;
-  color: #fff;
+  background-color: getColor(secondary);
+  color: getColor(bg-white);
   align-items: center;
   position: fixed;
   z-index: 999;
@@ -86,9 +87,9 @@
   margin-top: 10px;
 
   &__exit {
-    border: 1px solid #fff;
+    border: 1px solid getColor(bg-white);
     padding: 5px;
-    font-family: "Roboto Serif", sans-serif;
+    font-family: $font-secondary;
     border-radius: 2px;
   }
 

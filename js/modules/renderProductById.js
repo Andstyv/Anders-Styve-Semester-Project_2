@@ -23,11 +23,13 @@ async function fetchProductById(url) {
     const username = getUserName();
     const hasImage = product.image;
 
+    console.log(product);
+
     container.innerHTML = `
     <a class="btn-secondary "href="products.html">Back</a>
     <div class="specific-product">
     <div class="specific-product__image">
-    ${hasImage ? `<img class="specific-product__img" src="${baseUrl + product.image.url}"></img>` : `<img class="specific-product__img">No image yet</img>`}</div>
+    ${hasImage ? `<img class="specific-product__img" src="${baseUrl + product.image.url}" alt="${product.image.alternativeText}"></img>` : `<img class="specific-product__img">No image yet</img>`}</div>
 
     <div class="specific-product__content">
     <h3 class="specific-product__title">${product.title}</h3>

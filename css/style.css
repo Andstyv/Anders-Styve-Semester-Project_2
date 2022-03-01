@@ -10,6 +10,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #985d68;
+  font-family: "Staatliches", cursive, serif;
+  letter-spacing: 1px;
 }
 
 .nav-container .nav-content {
@@ -41,7 +43,6 @@
 }
 
 .nav-container .nav-content__logo--txt {
-  font-family: "Staatliches", cursive;
   font-size: 36px;
   margin: 10px 0 10px 5px;
 }
@@ -72,7 +73,6 @@
       justify-content: space-around;
   width: 100%;
   padding: 0;
-  font-family: "Staatliches", cursive;
   font-size: 25px;
 }
 
@@ -97,7 +97,6 @@
 
 .nav-container .nav-content__admin .nav-content__adminlist {
   list-style: none;
-  font-family: "Staatliches", cursive;
   font-size: 20px;
   background-color: #5d988d;
   border-radius: 5px;
@@ -117,7 +116,6 @@
 }
 
 .nav-container .nav-content__admin .nav-content__adminlist li button {
-  font-family: "Staatliches", cursive;
   margin-bottom: 5px;
 }
 
@@ -175,7 +173,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive, serif;
   color: #fff;
   letter-spacing: 1px;
   font-size: 12px;
@@ -305,6 +303,17 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Staatliches", cursive, serif;
+}
+
+p {
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 14px;
 }
 
 .specific-product-container {
@@ -657,7 +666,7 @@
 
 .cart-container .cart-card__remove {
   cursor: pointer;
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive, serif;
 }
 
 .cart-container .cart-card__icon {
@@ -666,7 +675,7 @@
 }
 
 .cart-container__empty {
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive, serif;
   text-align: center;
   margin: 10px 0;
 }
@@ -674,7 +683,7 @@
 .cart-back-btn {
   text-align: center;
   margin: 0 auto;
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive, serif;
   margin: 100px 0 20px 10px;
 }
 
@@ -753,7 +762,7 @@
   position: absolute;
   top: 33px;
   left: 31px;
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", cursive, serif;
   font-size: 32px;
   color: #000;
 }
@@ -795,21 +804,6 @@
 
 #login-form__password #passwordInput {
   padding: 5px;
-}
-
-#login-form__button {
-  margin-top: 50px;
-}
-
-#login-form__button button {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border: none;
-  color: #fff;
-  background-color: #985d68;
-  border-radius: 2px;
-  font-family: "Staatliches", cursive;
-  letter-spacing: 1px;
 }
 
 .edit-container {
@@ -861,6 +855,7 @@
           flex-direction: column;
   text-align: start;
   padding: 10px 20px;
+  font-family: "Roboto Serif", sans-serif;
 }
 
 .edit-form div {
@@ -1011,17 +1006,5 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Staatliches", cursive;
-}
-
-p,
-label {
-  font-family: "Roboto Serif", sans-serif;
-  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

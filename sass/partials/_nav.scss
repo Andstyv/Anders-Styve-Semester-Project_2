@@ -3,14 +3,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #985d68;
+  background-color: getColor(primary);
+  font-family: $font-primary;
+  letter-spacing: 1px;
 
   .nav-content {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
     align-items: center;
-    color: #fff;
+    color: getColor(bg-white);
 
     &__logo {
       display: flex;
@@ -19,7 +21,6 @@
       width: 250px;
 
       &--txt {
-        font-family: "Staatliches", cursive;
         font-size: 36px;
         margin: 10px 0 10px 5px;
       }
@@ -40,15 +41,14 @@
       justify-content: space-around;
       width: 100%;
       padding: 0;
-      font-family: "Staatliches", cursive;
       font-size: 25px;
 
       .nav-content__link {
         text-decoration: none;
-        color: #fff;
+        color: getColor(bg-white);
 
         &--active {
-          color: #5d988d;
+          color: getColor(secondary);
         }
       }
     }
@@ -60,12 +60,10 @@
 
       .nav-content__adminlist {
         list-style: none;
-        font-family: "Staatliches", cursive;
         font-size: 20px;
-        background-color: #5d988d;
+        background-color: getColor(secondary);
         border-radius: 5px;
         padding: 0;
-        // margin: 0px 0 50px 0;
         text-align: center;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 
@@ -74,10 +72,9 @@
 
           a {
             text-decoration: none;
-            color: #fff;
+            color: getColor(bg-white);
           }
           button {
-            font-family: "Staatliches", cursive;
             margin-bottom: 5px;
           }
         }
@@ -90,7 +87,6 @@
 @media (min-width: 768px) {
   .nav-container {
     flex-direction: row;
-    // width: 100vw;
 
     .nav-content {
       width: 100%;

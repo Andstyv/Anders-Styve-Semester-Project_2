@@ -8,13 +8,13 @@
 
 .login-form {
   text-align: center;
-  background-color: #5d988d;
+  background-color: getColor(secondary);
   border-radius: 5px;
   padding: 25px;
 
   &__title {
     margin-bottom: 50px;
-    color: #fff;
+    color: getColor(bg-white);
   }
 }
 
@@ -29,19 +29,5 @@
   margin: 10px;
   #passwordInput {
     padding: 5px;
-  }
-}
-#login-form__button {
-  margin-top: 50px;
-
-  button {
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border: none;
-    color: #fff;
-    background-color: #985d68;
-    border-radius: 2px;
-    font-family: "Staatliches", cursive;
-    letter-spacing: 1px;
   }
 }

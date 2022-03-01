@@ -38,7 +38,7 @@ export function renderCart(productsToRender) {
                             
                             <div class="cart-card__remove" data-id="${product.id}" data-title="${product.title}" data-price="${product.price}" data-description="${product.description}" data-imgurl="${
       product.image.url
-    }"><i class="cart-product__icon fas fa-times-circle"></i>Remove</div>
+    }"><i class="cart-card__icon fas fa-times-circle"></i>Remove</div>
                             </div>
                             `;
   });

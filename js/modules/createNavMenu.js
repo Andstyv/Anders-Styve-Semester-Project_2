@@ -17,7 +17,7 @@ export function createNavMenu() {
 
   navContainer.innerHTML = `
   <div class="nav-content">
-  <div class="nav-content__logo"><i class="fab fa-pushed"></i><p class="nav-content__logo--txt">shoos</p></div>
+  <div class="nav-content__logo"><i class="fab fa-pushed"></i><div class="nav-content__logo--txt">shoos</div></div>
   <div class="nav-content__main">
     <ul class="nav-content__list">
       <li class="nav-content__item"><a href="/" class="${pathname === "/" ? "nav-content__link--active" : "nav-content__link"}">Home</a></li>

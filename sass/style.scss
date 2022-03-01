@@ -1,6 +1,8 @@
+@import "partials/variables";
 @import "partials/nav";
 @import "partials/footer";
 @import "partials/main";
+@import "partials/typography";
 @import "partials/product";
 @import "partials/products";
 @import "partials/cart";
@@ -62,14 +64,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-h1,
-h2,
-h3 {
-  font-family: "Staatliches", cursive;
-}
+// h1,
+// h2,
+// h3 {
+//   font-family: "Staatliches", cursive;
+// }
 
-p,
-label {
-  font-family: "Roboto Serif", sans-serif;
-  font-weight: 300;
-}
+// p,
+// label {
+//   font-family: "Roboto Serif", sans-serif;
+//   font-weight: 300;
+// }
