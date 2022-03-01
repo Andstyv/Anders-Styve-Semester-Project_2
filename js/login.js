@@ -1,4 +1,4 @@
-import { createNavMenu } from "./modules/createNavMenu.js";
+import { createNavMenu } from "./components/createNavMenu.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./utils/APIUrls.js";
 

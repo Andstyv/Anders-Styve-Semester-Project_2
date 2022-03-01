@@ -10,7 +10,7 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const productUrl = productsUrl + "/" + id;
-const container = document.querySelector(".specific-product-container");
+const productContainer = document.querySelector(".specific-product-container");
 
 createNavMenu();
 logout();
@@ -20,12 +20,11 @@ async function fetchProductById(url) {
   try {
     const response = await fetch(url);
     const product = await response.json();
+
     const username = getUserName();
     const hasImage = product.image;
 
-    console.log(product);
-
-    container.innerHTML = `
+    productContainer.innerHTML = `
     <a class="btn-secondary "href="products.html">Back</a>
     <div class="specific-product">
     <div class="specific-product__image">

@@ -1,7 +1,7 @@
-import { createNavMenu } from "./modules/createNavMenu.js";
-import { itemsInCartTracker } from "./modules/itemsInCartTracker.js";
-import { logout } from "./modules/logout.js";
-import { renderProducts } from "./modules/renderProducts.js";
+import { createNavMenu } from "./components/createNavMenu.js";
+import { itemsInCartTracker } from "./components/itemsInCartTracker.js";
+import { logout } from "./components/logout.js";
+import { renderProducts } from "./components/renderProducts.js";
 import { baseUrl, productsUrl } from "./utils/APIUrls.js";
 
 createNavMenu();
@@ -30,9 +30,9 @@ export async function fetchFeaturedProducts() {
 fetchFeaturedProducts();
 
 async function fetchHeaderImg() {
+  const img = document.querySelector(".bg-grid__headerimg");
   try {
     const headerImgUrl = baseUrl + "/home/";
-    const img = document.querySelector(".bg-grid__headerimg");
 
     const response = await fetch(headerImgUrl);
     const json = await response.json();
@@ -42,6 +42,7 @@ async function fetchHeaderImg() {
     img.innerHTML = `<img class="bg-grid__headerimg--img" src="${baseUrl}${headerImg.hero_banner.url}" alt="${headerImg.hero_banner_alt_text}" />`;
   } catch (error) {
     console.log(error);
+    img.innerHTML = `<div>Error: ${error}</div>`;
   }
 }
 fetchHeaderImg();

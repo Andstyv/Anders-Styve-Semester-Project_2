@@ -22,6 +22,7 @@ export function RemoveFromCart() {
     }
   } else {
     console.log("error");
+    alert(`Error: ${error}`);
   }
 }
 

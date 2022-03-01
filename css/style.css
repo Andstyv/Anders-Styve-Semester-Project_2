@@ -828,6 +828,11 @@ p {
   padding: 5px;
 }
 
+#login-form__error {
+  margin-bottom: 30px;
+  color: #c80000;
+}
+
 .btn-container {
   display: -webkit-box;
   display: -ms-flexbox;

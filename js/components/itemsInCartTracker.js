@@ -9,7 +9,6 @@ export function itemsInCartTracker() {
   for (let i = 0; i < itemsInCart.length; i++) {
     totalNumberOfProducts += itemsInCart[i].qty;
   }
-  console.log(totalNumberOfProducts);
 
   if (!itemsInCart.length) {
     cartWidgetLink.style.display = "none";

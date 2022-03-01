@@ -1,8 +1,8 @@
 import { getToken } from "./utils/storage.js";
-import { createNavMenu } from "./modules/createNavMenu.js";
-import { logout } from "./modules/logout.js";
-import { deleteProduct } from "./modules/deleteProduct.js";
-import { addNewProductImg } from "./modules/uploadProductImg.js";
+import { createNavMenu } from "./components/createNavMenu.js";
+import { logout } from "./components/logout.js";
+import { deleteProduct } from "./components/deleteProduct.js";
+import { addNewProductImg } from "./components/uploadProductImg.js";
 import { baseUrl, productsUrl } from "./utils/APIUrls.js";
 
 const queryString = document.location.search;

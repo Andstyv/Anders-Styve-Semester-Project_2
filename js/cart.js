@@ -1,7 +1,7 @@
-import { getCartItems } from "./modules/getCartItems.js";
-import { createNavMenu } from "./modules/createNavMenu.js";
-import { logout } from "./modules/logout.js";
-import { renderCart } from "./modules/renderCart.js";
+import { getCartItems } from "./components/getCartItems.js";
+import { createNavMenu } from "./components/createNavMenu.js";
+import { logout } from "./components/logout.js";
+import { renderCart } from "./components/renderCart.js";
 
 let itemsInCart = getCartItems();
 

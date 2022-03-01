@@ -22,9 +22,12 @@ export function deleteProduct(id) {
       try {
         const response = await fetch(deleteUrl, options);
         const json = await response.json();
-        location.href = "/products.html";
+        if (json) {
+          location.href = "/products.html";
+        }
       } catch (error) {
         console.log(error);
+        alert("An error occured. Try again");
       }
     }
   };

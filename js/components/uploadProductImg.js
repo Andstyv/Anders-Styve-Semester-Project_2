@@ -26,5 +26,6 @@ export async function addNewProductImg() {
     }
   } catch (error) {
     console.log(`Error: ${error}`);
+    uploadForm.innerHTML = `Error: ${error}`;
   }
 }

@@ -2,13 +2,12 @@ import { RemoveFromCart } from "./removeFromCart.js";
 import { baseUrl } from "../utils/APIUrls.js";
 
 export function renderCart(productsToRender) {
-  const container = document.querySelector(".cart-container");
+  const cartContainer = document.querySelector(".cart-container");
   const sumContainer = document.querySelector(".sum-container");
 
-  container.innerHTML = "";
+  cartContainer.innerHTML = "";
 
   if (!productsToRender.length) {
-    console.log("empty");
     container.innerHTML = `<div class="cart-container__empty">Cart is empty</div>`;
   }
 
@@ -19,7 +18,7 @@ export function renderCart(productsToRender) {
   sumContainer.innerHTML = `<p class="sum-container__total">Total price: $${totalPrice}</p>`;
 
   productsToRender.forEach((product) => {
-    container.innerHTML += `
+    cartContainer.innerHTML += `
                             <div class="cart-card">
                             <div class="cart-card__head">
                             <img class="cart-card__img" src="${baseUrl}${product.image.url}"></img>
@@ -43,8 +42,8 @@ export function renderCart(productsToRender) {
                             `;
   });
 
-  const starFavBtn = document.querySelectorAll(".cart-card__remove");
-  starFavBtn.forEach((button) => {
+  const removeBtn = document.querySelectorAll(".cart-card__remove");
+  removeBtn.forEach((button) => {
     button.addEventListener("click", RemoveFromCart);
   });
 }
