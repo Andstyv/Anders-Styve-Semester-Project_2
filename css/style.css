@@ -58,6 +58,8 @@ label {
       -ms-flex-pack: center;
           justify-content: center;
   width: 250px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .nav-container .nav-content__logo--txt {
@@ -65,8 +67,9 @@ label {
   margin: 10px 0 10px 5px;
 }
 
-.nav-container .nav-content__logo i {
-  font-size: 48px;
+.nav-container .nav-content__logo img {
+  width: 100px;
+  height: auto;
 }
 
 .nav-container .nav-content__main {
@@ -341,6 +344,7 @@ label {
   .bg-grid__title {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 46px;
   }
 }
 
@@ -677,6 +681,10 @@ p {
   word-wrap: break-word;
 }
 
+.cart-container .cart-card__title a {
+  color: #5d988d;
+}
+
 .cart-container .cart-card__img {
   width: 100px;
   height: 100px;
@@ -903,7 +911,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -1008,14 +1015,18 @@ p {
 }
 
 .upload-form__exit {
-  border: 1px solid #fff;
-  padding: 5px;
   font-family: "Roboto Serif", sans-serif;
   border-radius: 2px;
+  color: #000;
+  background-color: #fff;
+  padding: 5px 5px 1px 5px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .upload-form__title {
   margin-bottom: 50px;
+  color: #000;
 }
 
 .upload-form #inputFiles {

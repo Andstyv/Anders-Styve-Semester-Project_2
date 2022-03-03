@@ -8,7 +8,7 @@ export function renderCart(productsToRender) {
   cartContainer.innerHTML = "";
 
   if (!productsToRender.length) {
-    container.innerHTML = `<div class="cart-container__empty">Cart is empty</div>`;
+    cartContainer.innerHTML = `<div class="cart-container__empty">Cart is empty</div>`;
   }
 
   let totalPrice = 0;

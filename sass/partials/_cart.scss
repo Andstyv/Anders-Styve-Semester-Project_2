@@ -25,6 +25,9 @@
     &__title {
       width: 100px;
       word-wrap: break-word;
+      a {
+        color: getColor(secondary);
+      }
     }
 
     &__img {

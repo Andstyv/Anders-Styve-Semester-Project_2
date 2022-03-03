@@ -19,13 +19,16 @@
       align-items: center;
       justify-content: center;
       width: 250px;
+      text-decoration: none;
+      color: getColor(bg-white);
 
       &--txt {
         font-size: 36px;
         margin: 10px 0 10px 5px;
       }
-      i {
-        font-size: 48px;
+      img {
+        width: 100px;
+        height: auto;
       }
     }
 

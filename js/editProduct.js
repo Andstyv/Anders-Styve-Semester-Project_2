@@ -26,7 +26,7 @@ const toggleFeatured = document.getElementById("toggleFeatured");
 const price = document.getElementById("priceInput");
 const description = document.getElementById("descInput");
 const idInput = document.getElementById("idInput");
-const editItemError = document.getElementById("edit-error");
+const editItemError = document.getElementById("edit-content__error");
 const loadingMsg = document.getElementById("loading");
 const imgRefId = document.getElementById("imageRefId");
 const imgUploadBtn = document.getElementById("upload-img-btn");
@@ -53,7 +53,7 @@ export async function fetchProductToEdit() {
 
     const hasImage = product.image;
 
-    productImg.innerHTML = `<img src="${hasImage ? baseUrl + product.image.url : "#"}" alt="${product.image.alternativeText}"></img>`;
+    productImg.innerHTML = `<img src="${hasImage ? baseUrl + product.image.url : "#"}" alt="${hasImage ? product.image.alternativeText : ""}"></img>`;
 
     productName.value = product.title;
     toggleFeatured.checked = product.featured;
