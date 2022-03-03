@@ -53,7 +53,7 @@ export async function fetchProductToEdit() {
 
     const hasImage = product.image;
 
-    productImg.innerHTML = `<img src="${hasImage ? baseUrl + product.image.url : "#"}" style="width:300px"></img>`;
+    productImg.innerHTML = `<img src="${hasImage ? baseUrl + product.image.url : "#"}" alt="${product.image.alternativeText}"></img>`;
 
     productName.value = product.title;
     toggleFeatured.checked = product.featured;

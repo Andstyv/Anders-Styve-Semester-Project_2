@@ -21,8 +21,8 @@ export function renderCart(productsToRender) {
     cartContainer.innerHTML += `
                             <div class="cart-card">
                             <div class="cart-card__head">
-                            <img class="cart-card__img" src="${baseUrl}${product.image.url}"></img>
-                            <h3 class="cart-card__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h3>
+                            <img class="cart-card__img" src="${baseUrl}${product.image.url}" alt="${product.image.alternativeText}" ></img>
+                            <h2 class="cart-card__title"><a class ="cart-product__link" href="product.html?id=${product.id}" >${product.title}</a></h2>
                             </div>
                             <div class="cart-card__qty">
                               <p>Qty:</p>

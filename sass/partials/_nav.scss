@@ -48,7 +48,9 @@
         color: getColor(bg-white);
 
         &--active {
-          color: getColor(secondary);
+          color: getColor(bg-white);
+          text-decoration: none;
+          border-bottom: 3px solid getColor(secondary);
         }
       }
     }
@@ -70,12 +72,20 @@
         li {
           padding: 2px 5px;
 
-          a {
+          span {
             text-decoration: none;
-            color: getColor(bg-white);
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            color: getColor(text-black) !important;
           }
           button {
             margin-bottom: 5px;
+            border-radius: 2px;
+            border: none;
+          }
+          a {
+            text-decoration: none;
+            color: getColor(text-black) !important;
           }
         }
       }

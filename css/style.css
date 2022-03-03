@@ -100,7 +100,9 @@ label {
 }
 
 .nav-container .nav-content .nav-content__list .nav-content__link--active {
-  color: #5d988d;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid #5d988d;
 }
 
 .nav-container .nav-content__admin {
@@ -128,13 +130,22 @@ label {
   padding: 2px 5px;
 }
 
-.nav-container .nav-content__admin .nav-content__adminlist li a {
+.nav-container .nav-content__admin .nav-content__adminlist li span {
   text-decoration: none;
-  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #000 !important;
 }
 
 .nav-container .nav-content__admin .nav-content__adminlist li button {
   margin-bottom: 5px;
+  border-radius: 2px;
+  border: none;
+}
+
+.nav-container .nav-content__admin .nav-content__adminlist li a {
+  text-decoration: none;
+  color: #000 !important;
 }
 
 @media (min-width: 768px) {
@@ -265,14 +276,14 @@ label {
 .bg-grid__title {
   margin: 0;
   margin-bottom: 15px;
-  font-size: 46px;
+  font-size: 38px;
   letter-spacing: 2px;
 }
 
 .bg-grid__title--text {
   margin-top: 5px;
   margin-bottom: 0px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 25px;
 }
 
@@ -789,6 +800,10 @@ p {
           justify-content: flex-start;
 }
 
+.cart-title-container .cart-title-h1 {
+  margin-left: 20px;
+}
+
 .login-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,7 +862,7 @@ p {
   padding: 5px;
   font-size: 20px;
   background-color: #985d68;
-  border-radius: 2px;
+  border-radius: 5px;
   color: #fff;
   font-family: "Staatliches", cursive, serif;
   letter-spacing: 1px;
@@ -860,6 +875,7 @@ p {
 
 .btn-secondary {
   background-color: #5d988d !important;
+  color: #000 !important;
 }
 
 .edit-container {
@@ -901,6 +917,11 @@ p {
   margin-top: 0;
 }
 
+.edit-container .edit-content__img img {
+  width: 275px;
+  height: auto;
+}
+
 .edit-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -936,7 +957,7 @@ p {
 
 .edit-form #descInput {
   height: 200px;
-  width: 300px;
+  width: 275px;
 }
 
 .edit-form__msg {

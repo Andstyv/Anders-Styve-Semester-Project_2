@@ -14,7 +14,7 @@ export function renderProducts(productsToRender) {
                               <div class="product-card__image">
                               ${hasImage ? `<img class="product-card__img" src="${baseUrl}${product.image.url}" alt="${product.image.alternativeText}"></img>` : `<div>No image yet</div>`}</div>
                               <div class="product-card__content">
-                              <h3 class="product-card__title">${product.title}</h3>
+                              <h2 class="product-card__title">${product.title}</h2>
                               <p class="product-card__price">$${product.price}</p>
                               <div class="btn-container">
                               <a class ="btn-secondary" href="product.html?id=${product.id}">Explore</a></div>
