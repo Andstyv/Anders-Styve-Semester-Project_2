@@ -17,7 +17,7 @@ export function createNavMenu() {
 
   navContainer.innerHTML = `
   <div class="nav-content">
-  <a href="/"class="nav-content__logo"><img src="../../img/shoos_logo1.png"></img></a>
+  <a href="/"class="nav-content__logo"><img src="../../img/shoos_logo1.png" alt="Shoos logo"></img></a>
   <div class="nav-content__main">
     <ul class="nav-content__list">
       <li class="nav-content__item"><a href="/" class="${pathname === "/" ? "nav-content__link--active" : "nav-content__link"}">Home</a></li>
