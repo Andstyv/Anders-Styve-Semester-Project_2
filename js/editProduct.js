@@ -8,9 +8,7 @@ import { baseUrl, productsUrl } from "./utils/APIUrls.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-
 const productUrl = productsUrl + "/" + id;
-
 const token = getToken();
 
 createNavMenu();
@@ -19,6 +17,7 @@ logout();
 if (!token) {
   location.href = "/";
 }
+
 const productImg = document.querySelector(".edit-content__img");
 const editForm = document.querySelector(".edit-form");
 const productName = document.getElementById("productNameInput");

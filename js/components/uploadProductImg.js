@@ -25,7 +25,6 @@ export async function addNewProductImg() {
       uploadForm.classList.toggle("show-modal");
     }
   } catch (error) {
-    console.log(`Error: ${error}`);
     uploadForm.innerHTML = `Error: ${error}`;
   }
 }

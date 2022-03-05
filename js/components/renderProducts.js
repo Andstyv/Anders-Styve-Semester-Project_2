@@ -5,7 +5,6 @@ import { baseUrl } from "../utils/APIUrls.js";
 export function renderProducts(productsToRender) {
   const container = document.querySelector(".products-container");
   const username = getUserName();
-
   container.innerHTML = "";
 
   productsToRender.forEach((product) => {

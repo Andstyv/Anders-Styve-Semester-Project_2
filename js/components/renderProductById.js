@@ -38,14 +38,14 @@ async function fetchProductById(url) {
       hasImage ? product.image.url : ""
     }"><i class="specific-product__cart--icon fas fa-shopping-cart"></i>Add to cart</div>
     ${username ? `<a class="btn-secondary" href="edit.html?id=${product.id}" >Edit product</a>` : ""}
-    </div></div>
-    `;
+    </div>
+    </div>`;
     const starFavBtn = document.querySelectorAll(".specific-product__cart");
     starFavBtn.forEach((button) => {
       button.addEventListener("click", addToCart);
     });
   } catch (error) {
-    console.log(error);
+    productContainer.innerHTML = `An error occured: ${error}`;
   }
 }
 

@@ -2,7 +2,6 @@ import { getUserName } from "../utils/storage.js";
 
 export function createNavMenu() {
   const { pathname } = document.location;
-
   const username = getUserName();
 
   let authLink = `<li><a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a></li>`;
@@ -33,5 +32,3 @@ ${logoutLink}
 </div>
 </div>`;
 }
-
-//<a href="index.html"class="nav-content__logo"><i class="fab fa-pushed"></i><div class="nav-content__logo--txt">shoos</div></a>

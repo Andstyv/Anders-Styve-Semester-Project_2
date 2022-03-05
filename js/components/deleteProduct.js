@@ -26,7 +26,6 @@ export function deleteProduct(id) {
           location.href = "/products.html";
         }
       } catch (error) {
-        console.log(error);
         alert("An error occured. Try again");
       }
     }

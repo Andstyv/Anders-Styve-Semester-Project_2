@@ -3,7 +3,6 @@ import { renderCart } from "./renderCart.js";
 
 export function RemoveFromCart() {
   const id = this.dataset.id;
-
   const currentInCart = getCartItems();
 
   const productExists = currentInCart.find(function (cartProducts) {
@@ -21,7 +20,6 @@ export function RemoveFromCart() {
       renderCart(newCartProducts);
     }
   } else {
-    console.log("error");
     alert(`Error: ${error}`);
   }
 }

@@ -3,9 +3,8 @@ import { productsUrl } from "../utils/APIUrls.js";
 
 export function addNewProduct() {
   const addContainer = document.querySelector(".add-container");
-  addContainer.innerHTML = "";
-
   const username = getUserName();
+  addContainer.innerHTML = "";
 
   if (username) {
     addContainer.innerHTML = `<button class="btn-main" id="add-new">+ Add new product</button>`;
@@ -69,7 +68,6 @@ function submitAddForm(e) {
 async function addProductDetails(name, featured, price, desc) {
   const data = JSON.stringify({ title: name, featured: featured, price: price, description: desc });
   const editConfMsg = document.querySelector(".edit-conf-msg");
-
   const token = getToken();
 
   const options = {
@@ -93,7 +91,6 @@ async function addProductDetails(name, featured, price, desc) {
       }, 1000);
     }
   } catch (error) {
-    console.log(error);
     editConfMsg.classList.add("edit-red");
     editConfMsg.innerHTML = `<i class="fas fa-exclamation-triangle"></i> Error: ${error}`;
   }
