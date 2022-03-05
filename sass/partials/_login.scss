@@ -1,38 +1,35 @@
-// LOGIN
 .login-container {
   display: flex;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 200px;
-}
 
-.login-form {
-  text-align: center;
-  background-color: getColor(secondary);
-  border-radius: 5px;
-  padding: 25px;
+  .login-form {
+    text-align: center;
+    background-color: getColor(secondary);
+    border-radius: 5px;
+    padding: 25px;
 
-  &__title {
-    margin-bottom: 50px;
-    color: getColor(bg-white);
+    &__title {
+      margin-bottom: 50px;
+      color: getColor(bg-white);
+    }
+    &__user {
+      margin: 10px;
+
+      #usernameInput {
+        padding: 5px;
+      }
+    }
+    &__password {
+      margin: 10px;
+      #passwordInput {
+        padding: 5px;
+      }
+    }
+    &__error {
+      margin-bottom: 30px;
+      color: rgb(200, 0, 0);
+    }
   }
-}
-
-#login-form__user {
-  margin: 10px;
-
-  #usernameInput {
-    padding: 5px;
-  }
-}
-#login-form__password {
-  margin: 10px;
-  #passwordInput {
-    padding: 5px;
-  }
-}
-
-#login-form__error {
-  margin-bottom: 30px;
-  color: rgb(200, 0, 0);
 }

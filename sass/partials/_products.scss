@@ -59,7 +59,6 @@
   }
 }
 
-// FILTER PRODUCTS
 .filter-container {
   display: flex;
   flex-direction: column;
@@ -85,7 +84,6 @@
   font-size: 20px;
 }
 
-// ADD NEW PRODUCT
 .add-container {
   display: flex;
   flex-direction: column;
@@ -128,7 +126,7 @@
   }
 }
 
-// PRODUCTS LARGE SCREENS
+// Media query for larger screens
 @media (min-width: 768px) {
   .featured-title {
     margin-bottom: 30px;

@@ -5,7 +5,7 @@ import { baseUrl } from "./utils/APIUrls.js";
 const loginForm = document.querySelector(".login-form");
 const username = document.getElementById("usernameInput");
 const password = document.getElementById("passwordInput");
-const errorContainer = document.getElementById("login-form__error");
+const errorContainer = document.querySelector(".login-form__error");
 
 loginForm.addEventListener("submit", submitLoginForm);
 
