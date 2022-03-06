@@ -621,6 +621,13 @@ p {
   margin-top: 0 !important;
 }
 
+.add-container .add-form .edit-conf-msg {
+  color: #5d988d;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
 .add-container #descInput {
   height: 200px;
   width: 300px;

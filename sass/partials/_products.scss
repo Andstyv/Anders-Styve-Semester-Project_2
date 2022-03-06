@@ -119,6 +119,10 @@
       margin-left: 0 !important;
       margin-top: 0 !important;
     }
+    .edit-conf-msg {
+      color: getColor(secondary);
+      align-self: center !important;
+    }
   }
   #descInput {
     height: 200px;

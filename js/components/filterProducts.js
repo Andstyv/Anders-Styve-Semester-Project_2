@@ -9,7 +9,7 @@ export function filterProducts(products) {
 
     if (searchValue) {
       const filteredProducts = products.filter(function (product) {
-        if (product.title.toLowerCase().indexOf(searchValue) > -1) {
+        if (product.title.toLowerCase().indexOf(searchValue) > -1 || product.description.toLowerCase().indexOf(searchValue) > -1) {
           return true;
         }
       });
