@@ -1,6 +1,6 @@
 # Semester Project 2
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://user-images.githubusercontent.com/74601625/193773702-791ce91e-0d22-4528-987c-f922619cb07f.png)
 
 An E-commerce website named SHOOS with both customer-facing and admin section. Built using JavaScript & Sass, and populated by a Strapi API.
 
