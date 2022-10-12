@@ -18,7 +18,6 @@ The goal for this project was to build an E-commerce website with a self-selecte
 
 ## Built With
 
-You can list a the tech stack that you've used over here
 
 - [JavaScript](#)
 - [Node.js](https://nodejs.org/en/)
